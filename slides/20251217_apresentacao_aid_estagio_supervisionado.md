@@ -11,6 +11,7 @@ slides:
 
 - Quem sou eu?
 - Quem é você!!
+- Quem somos nós...
 
 <!--s-->
 
@@ -31,7 +32,7 @@ Notes:
 
 [Decreto de competência](https://www.almg.gov.br/legislacao-mineira/texto/DEC/48636/2023/#:~:text=processos%20da%20Subsecretaria.-,Art.%2036,-%E2%80%93%20A%20Assessoria%20de)
 
-Na prática nosso papel é transformar dados em informação útil para tomada de decisão.
+Na prática nosso maior papel é transformar dados em informação útil para tomada de decisão.
 
 Notes:
 Isso envolve desde:
@@ -57,7 +58,8 @@ Notes:
 
 ## Filosofia docs as code
 
-Documentação deve ser algo feito no final, mas sim fazer parte do trabalho.
+Documentação faz parte de todo trabalho e não deve ser algo deixado somente para o final.
+
 Tudo que é aprendido, decidido ou construído deve ficar registrado.
 
 Notes:
@@ -69,9 +71,17 @@ Notes:
 
 <!--s-->
 
-## Sugestões de trabalhos
+## Monografia
+
+???
+
+<!--v-->
+
+## Monografia - Sugestões
 
 - Banco de dados relacional x grafos (ontologia orçamentária).
 - Estrutura conjuntos de dados abertos orçamentários.
 - Nova ferramenta de BI para substituir o Qlik view.
 - Formatos mais eficientes para publicação/divulgação da LOA.
+- Ganhos na utilização de projetos open sources para a administração pública.
+- Ganhos na utilização da filosofia Docs as code para a administração pública.
