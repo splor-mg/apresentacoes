@@ -90,3 +90,10 @@ jobs:
             https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
             📦 Source: `upstream/main`
+      - name: Workflow failure notification
+        uses: JasonEtco/create-an-issue@v2
+        if: failure()
+        # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/workflow-failure.md
