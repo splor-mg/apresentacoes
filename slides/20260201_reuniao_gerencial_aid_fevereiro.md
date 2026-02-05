@@ -18,7 +18,6 @@ slides:
 - Capacitações.
 - Não previsto.
 - ???
-- ???
 
 <!--s-->
 
@@ -47,7 +46,7 @@ Note:
 
 - Servidor não logado desligado e backup realizado (até o momento ninguém reclamou).
 - Em um mês máquina será deletada.
-- [Reunião equipe Casa Civil](20260210_servidor_qlik.md)
+- [Reunião equipe Casa Civil](20260210_servidor_qlik.md).
 
 <!--s-->
 
