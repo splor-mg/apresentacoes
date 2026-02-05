@@ -9,64 +9,132 @@ slides:
 
 ## Pauta
 
-- Capacitações.
-- Ementário da Receita.
-- Automatizações.
-- Transição de sistemas.
-- 14° Prêmio Sof.
 - Equipe.
+- Servidor Qlik.
+- Datamart.
+- Transição de sistemas.
+- IA.
+- Ementário.
+- Capacitações.
+- Não previsto.
+- ???
 - ???
 
 <!--s-->
 
-## Capacitações
+## Equipe
 
-- Primeira turma [Trilha-dev Python](https://trilhadev.planejamento.mg.gov.br/main/python/) prevista para iniciar em Abril 2026.
-- Capacitações direcionadas para Vivi e Laura (processos ETL).
+- Maria (previsão dia 23/02/2026)
+- Laura (Automatizações DCAF).
+- Estágios
+- Servidora do IPSEMG conversará com Rita amanhã (sem muita esperança).
+
+Note:
+
+- Maria inicialmente ficará por conta de ajudar Laura nas automatizações DCAF.
+- Maria já sabe R, mas precisa aprender Python (o que não será difícil).
+- Importância do trilhadev na chegada de novos integrantes para equipe.
+- Início supervisionado dia 15/03/2025.
+- Estágio normal devemos aguardar até início de março, devido troca da empresa responsável.
 
 <!--s-->
 
-## Ementário da Receita
+## Servidor Qlik
 
-- Projeto Carlos.
-- Previsão para finalização em Outubro de 2026.
+**Novidade**
+
+Note:
+
+- Servidor não logado desligado e backup realizado (até o momento ninguém reclamou).
+- Em um mês máquina será deletada.
+- [Reunião equipe Casa Civil](20260210_servidor_qlik.md)
 
 <!--s-->
 
-## Automatizações
+## Datamart
 
-- Previsão de 4 meses para iniciar testes (Entre Maio e Junho).
+Note:
+
+- Trabalhando mais ativamente nisso.
+- Reuniões com Vivi me animaram.
+- Chegada da Maria ajudará.
+- Estou padronizando os repositórios antes de criar o banco:
+  - Repositórios template para ETL.
+  - Biblioteca própria para o processo de ETL usando o padrão de documentação frictionless.
+  - Envio das informações para um banco de dados e para o GitHub (backup).
+  - Retirar processos de ETL do servidor Qlik (link table).
+- Vou estruturar melhor um cronograma para 2026.
 
 <!--s-->
 
 ## Transição de sistemas
 
 - Consultas GRP (De-Para) ja sendo feito com Vivi.
-- Sisor, Bella me pediu para esperar para conversar com Nivaldo em Fevereiro.
+- Sisor (**conversar com Nivaldo assim que for resolvido prazos de entrega**).
+
+Note:
+
+- Henrique disse que está estudando como fazer o robô para alimentar o GRP, me coloquei a disposição para auxiliar.
 
 <!--s-->
 
-## 14° Prêmio Sof
+## IA
 
-- [Inscrição realizada em Dezembro de 2025](https://enap.gov.br/pesquisa-e-conhecimento/concursos-e-premiacoes/14-premio-sof/).
-- Divulgação do resultado preliminar do julgamento dos trabalhos em 23/02/2026.
-- Divulgação do resultado definitivo dos trabalhos premiados em **09/03/2026**.
+- Feed.
+- COFIN.
+- ChatSei.
+
+Note:
+
+- Manutenções no Feed ao longo de Janeiro.
+- **Novidade**: Gastamos em torno de $2,00 para rodar cada jornal.
+- Atualização apresentações da COFIN será feita em Março (Já conseguimos utilizar a [API do SharePoint](https://github.com/splor-mg/sharepoint-api-python)).
+- Previsão de 4 meses para iniciar testes ChatSei (Entre Maio e Junho).
+- Prêmio Sof: resultado preliminar dia 23/02/2026 e resultado definitivo dia 09/03/2026.
 
 <!--s-->
 
-## Estágio supervisionado
+## Ementário
 
-- Entrevista inicial com estagiário realizada em Dezembro 2025.
-- Algumas dúvidas sobre o estágio (e-mail Maria Isabel).
+- **Novidade**: Reunião amanhã (11/02/2026) para mostrar primeiro MVP (**Laura participando**).
+
+Note:
+
+- Previsão para finalização em Outubro de 2026.
+- Mudei o nome para apenas ementário pois ele terá que servir para receitas e despesas.
+
 
 <!--s-->
 
-## Equipe
+## Capacitações
 
-- Laura.
-- Estágio.
-- Busca de servidores em geral.
+- Primeira turma [Trilha-dev Python](https://trilhadev.planejamento.mg.gov.br/main/python/) prevista para iniciar em Abril 2026.
+- **Novidade**: Capacitações direcionadas para Vivi e Laura ([processos ETL](https://splor-mg.github.io/handbook/blog/category/etl/)) e automatizações DCAF.
+
+Note:
+
+- Automatizações DCAF trabalhando com [reestimativa](https://github.com/splor-mg/reestimativa_2026).
+- [Análises e priorizações Laura](https://github.com/orgs/splor-mg/discussions/28).
+
+<!--s-->
+
+## Não previsto
+
+- Melhorias processo de geração da LOA.
+- Robô GRP.
+
+Note:
+
+- LOA estava pensando no André, que não virá mais.
 
 <!--s-->
 
 ## ???
+
+Note:
+
+- Alguma orientação?
+
+<!--s-->
+
+## FIM
