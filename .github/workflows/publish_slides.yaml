@@ -44,12 +44,11 @@ jobs:
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
         run: poetry install --no-interaction
-      - name: Build Slides
-        run: poetry run task build
-      - name: Upload slides artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: site
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        id: deployment
+      - name: Build and publish slides
+        run: |
+          MKSLIDES_VERSION=$(poetry run mkslides --version | sed -n '1p')
+          COMMIT_HASH=$(git rev-parse --short HEAD)
+          COMMIT_MESSAGE="Build site $COMMIT_HASH with $MKSLIDES_VERSION"
+          poetry run task build
+          rm -rf site/mkslides-assets/reveal-js/.git
+          poetry run task gh-pages -m "$COMMIT_MESSAGE"
