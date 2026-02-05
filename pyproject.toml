@@ -52,7 +52,7 @@ addopts = '-p no:warnings'
 
 
 [tool.taskipy.tasks]
-build = { cmd = "mkslides build", help = "Builds the html files." }
+build = { cmd = "mkslides build -d docs/", help = "Builds the html files." }
 serve = { cmd = "mkslides serve", help = "Runs the server." }
 list = { cmd = "task --list", help = "List all tasks." }
 lint = { cmd = 'ruff check', help = 'Checks for good coding practices in Python.' }

@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+
+        <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/theme/solarized.css" />
+        
+        
+            <link rel="stylesheet" href="mkslides-assets/highlight-js-themes/monokai.css" />
+        
+
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="<!--s-->"
+                
+                    data-separator-vertical="<!--v-->"
+                
+                    data-separator-notes="^Notes?:"
+                
+                    data-charset="utf-8"
+                
+                >
+                    <!-- The markdown must be placed to the whole left to prevent indentation issues like https://github.com/MartenBE/mkslides/issues/52 -->
+                    <textarea data-template>
+# Servidor Qlik
+
+<!--s-->
+
+## Pauta
+
+- Apresentações
+- Contexto Histórico
+- Quem Utiliza
+- Processos e Alternativas
+
+<!--s-->
+
+## Apresentações
+
+<!--s-->
+
+## Contexto Histórico
+
+- Licenças Qlik.
+- Servidor.
+
+Note:
+
+- Licença Qlik:
+  - Licitação realizada em 2013.
+  - Comprado Licenças para áreas logadas e abertas.
+  - Para consultar a licitação basta pesquisar por "Qlik" no [Objeto de licitação](https://www1.compras.mg.gov.br/processocompra/pregao/consulta/consultaPregoes.html#).
+  - [Consultar edital](https://www1.compras.mg.gov.br/processocompra/pregao/consulta/dados/abaDadosPregao.html?metodo=abrirArquivoEdital&idPregao=46408).
+  - Qlik não vende mais este tipo de licença. Agora somente serviços Cloud.
+- Servidor:
+  - Windows Server 2008 R2 Standard.
+  - Sem [suporte Microsoft](https://learn.microsoft.com/pt-br/troubleshoot/windows-server/windows-server-eos-faq/end-of-support-windows-server-2008-2008r2) a partir de 2020.
+  - Disco com 80% de utilização (storage).
+  - Memória RAM no seu limite de processamento.
+
+<!--s-->
+
+## Quem Utiliza
+
+- Seplag:
+  - SPLOR.
+  - SCAP.
+  - COFIN.
+  - SUGES.
+- Casa Civil.
+
+<!--s-->
+
+## Processos e Alternativas
+
+- Processos ETL.
+- Paineis Qlik.
+
+Note:
+
+- Estes são processos conhecidos pela AID.
+- Gabriel (SCC) informou em 14/04/2025, [de maneira resumida](https://teams.microsoft.com/l/message/19:302739e5-013a-4388-987d-f726008fa3d0_ed7857d7-ef2d-4911-b321-cb2a443bec03@unq.gbl.spaces/1744639317776?context=%7B%22contextType%22%3A%22chat%22%7D), quais são os processos de extração de dados realizados pela SCC.
+- ETL SPLOR sabe como transferir.
+  - GitHub.
+  - GitHub Actions.
+  - Python.
+  - [Datapackages](https://datapackage.org/overview/introduction/).
+- Qlik:
+  - Splor ainda não sabe qual ferramenta irá utilizar.
+  - PowerBi é uma ótima alternativa para outras áreas.
+
+<!--v-->
+
+## Processos e Alternativas
+
+Capacitações
+
+Note:
+
+- [Trilhadev](https://trilhadev.planejamento.mg.gov.br/main/).
+- [Encontros com equipe](https://splor-mg.github.io/handbook/blog/category/etl/) para melhoria de nossos processos ETL.
+
+<!--v-->
+
+## Processos e Alternativas
+
+- Power BI.
+- Ferramentas de BI Open Source.
+- Máquinas virtuais Azure (contrato intendência).
+
+Note:
+
+- [Metabase](https://www.metabase.com/):
+  - Necessário ter uma base SQL.
+- [Streamlit](https://streamlit.io/):
+  - Ferramenta Python.
+  - Exige mais configuração para criar áreas logadas.
+- [django](https://www.djangoproject.com/):
+  - Ferramenta Python.
+  - Exige um pouco mais conhecimento.
+
+- Azure:
+  - Conhecimento mínimo de administração de servidores.
+  - [easypanel](https://easypanel.io/) pode ajudar e dar autonomia em relação à PRODEMGE e consultores Microsoft.
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="mkslides-assets/reveal-js/dist/reveal.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/math/math.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/search/search.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/zoom/zoom.js"></script>
+
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                
+                plugins: [
+                    RevealMarkdown, // Must come before the other plugins so they can hook into the generated HTML.
+                    RevealHighlight,
+                    RevealMath.KaTeX,
+                    RevealNotes,
+                    RevealSearch,
+                    RevealZoom,
+
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>
