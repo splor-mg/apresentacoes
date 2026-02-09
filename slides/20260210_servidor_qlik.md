@@ -91,14 +91,40 @@ Note:
 
 Note:
 
+- PowerBi:
+	- Não penso em migrar para nenhuma versão paga de PowerBi.
+	- Sou muito a favor de projetos open source.
 - [Metabase](https://www.metabase.com/):
   - Necessário ter uma base SQL.
+	- Quais os principais desafios técnicos do Metabase que vocês identificaram?
+		- Depender de uma base SQL (curva de aprendizado).
+		- Instalação e manutenção (administração de servidor).
+		- Pequena curva de aprendizado para montar as consultas/visualizações.
 - [Streamlit](https://streamlit.io/):
   - Ferramenta Python.
   - Exige mais configuração para criar áreas logadas.
+	- Como configurar para rodar 24h/dia em servidor? Precisa de algum gerenciador de processos?
+		- Precisa ser instalado em um servidor, tipo Azure.
+		- Existem algumas opções gratuitas que funcionariam, a depender do tamanho da aplicação.
+	- Como funciona a atualização automática das bases de dados conectadas ao Streamlit?
+		- Um GitHub actions poderia ser acionado periodicamente (diariamente ou até a cada hora).
+		- Conectado automaticamente em um banco de dados (sem necessidade de atualização manual).
+	- Quais os principais desafios ou limitações do Streamlit para ambientes corporativos?
+		- Do ponto de vista de segurança não vejo nenhum.
+		- Curva de aprendizado.
+	- Rodar pelo GitHub/servidor elimina a necessidade dos usuários terem Python instalado localmente? Não queremos depender de scripts rodando apenas em computadores específicos.
+		- Sim, esta responsabilidade fica a cargo do Action (GitHub) e/ou do servidor.
 - [django](https://www.djangoproject.com/):
   - Ferramenta Python.
   - Exige um pouco mais conhecimento.
+- Infraestrutura de dados
+	- Vocês possuem um data lake estruturado?
+		- Ainda não, mas está em nosso radar. Atualmente nossa base de dados são arquivos `.csv` no GitHub.
+	- Se sim, qual a estrutura geral (softwares utilizados, arquitetura de tratamento, camadas de dados)?
+		- Banco de dados SQL (PostgreSql).
+		- Aplicação web para facilitar modificações nos schemas do banco (django).
+		- Servidor Azure.
+		- ELT em Python (padrão frictionless e AID)
 
 - Azure:
   - Conhecimento mínimo de administração de servidores.
