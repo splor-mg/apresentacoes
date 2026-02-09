@@ -54,6 +54,7 @@ Note:
 
 Note:
 
+- Dados abertos SIAFI e SISOR: solicitei publicação de notícia p ASCOM.
 - Trabalhando mais ativamente nisso.
 - Reuniões com Vivi me animaram.
 - Chegada da Maria ajudará.
