@@ -33,7 +33,7 @@ Note:
 - Maria inicialmente ficará por conta de ajudar Laura nas automatizações DCAF.
 - Maria já sabe R, mas precisa aprender Python (o que não será difícil).
 - Importância do trilhadev na chegada de novos integrantes para equipe.
-- Início supervisionado dia 15/03/2025.
+- Início supervisionado dia 16/03/2025. FJP fará contato após carnaval para maiores detalhes.
 - Estágio normal devemos aguardar até início de março, devido troca da empresa responsável.
 
 <!--s-->
