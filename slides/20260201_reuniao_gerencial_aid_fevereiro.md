@@ -23,13 +23,14 @@ slides:
 
 ## Equipe
 
-- Maria (previsão dia 23/02/2026)
+- Maria (previsão dia 23/02/2026).
 - Laura (Automatizações DCAF).
-- Estágios
+- Estágios.
 - Servidora do IPSEMG conversará com Rita amanhã (sem muita esperança).
 
 Note:
 
+- Processo SEI Maria ainda não foi respondido.
 - Maria inicialmente ficará por conta de ajudar Laura nas automatizações DCAF.
 - Maria já sabe R, mas precisa aprender Python (o que não será difícil).
 - Importância do trilhadev na chegada de novos integrantes para equipe.
@@ -54,7 +55,7 @@ Note:
 
 Note:
 
-- Dados abertos SIAFI e SISOR: solicitei publicação de notícia p ASCOM.
+- Dados abertos SIAFI e SISOR: [Notícia publicada](https://www.mg.gov.br/planejamento/noticias/governo-de-minas-amplia-transparencia-e-divulga-novos-dados-orcamentarios-no-portal-de-dados-abertos).
 - Trabalhando mais ativamente nisso.
 - Reuniões com Vivi me animaram.
 - Chegada da Maria ajudará.
@@ -96,7 +97,7 @@ Note:
 
 ## Ementário
 
-- **Novidade**: Reunião amanhã (11/02/2026) para mostrar primeiro MVP (**Laura participando**).
+- **Novidade**: MVP apresentado hoje (11/02/2026) (**Laura participando**).
 
 Note:
 
@@ -121,7 +122,7 @@ Note:
 ## Não previsto
 
 - Melhorias processo de geração da LOA.
-- Robô GRP.
+- Robôs GRP.
 
 Note:
 
