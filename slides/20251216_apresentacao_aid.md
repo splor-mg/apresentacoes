@@ -15,6 +15,17 @@ Assessoria de Inteligência de dados - AID/SPLOR-MG
 
 Na prática nosso maior papel é transformar dados em informação útil para tomada de decisão.
 
+Notes:
+- Assessoria atua fortemente com tecnologia da informação, dados e métodos de trabalho pouco tradicionais no setor público.
+- Apesar disso, não precisamos de programadorores, queremos um servidor com letramento digital e analítico.
+- Não é necessário saber programar, mas precisa estar disposto a aprender, experimentar e trabalhar de uma forma diferente do padrão burocrático clássico (não se assuste).
+- Isso envolve desde:
+  - [Link para relatório operacional](http://200.198.9.184/Qlikview/index.htm).
+  - Pensar como os dados são organizados.
+  - Construir ferramentas (ETL).
+  - Automatizar análises (ainda não chegamos lá).
+  - Ensinar "todos" a usar esses recursos (programação aqui não é um pré-requisito e sim uma competência que será construída).
+
 <!--s-->
 
 ## Forma de trabalho
@@ -41,3 +52,35 @@ Notes:
     - Revisão compartilhada.
     - Publicação automática.
 - Para que isso se transforme em hábito é necessário prática, não se aprende da noite para o dia.
+
+<!--s-->
+
+## Principais entregas
+
+Notes:
+- [LOA](https://github.com/splor-mg/volumes-loa).
+- [ETL](https://github.com/orgs/splor-mg/repositories?q=dados).
+- Relatório operacional.
+
+<!--s-->
+
+## Principais Projetos
+
+Notes:
+- [Trilhadev](https://trilhadev.planejamento.mg.gov.br/).
+- Automatizações:
+  - Feed.
+  - COFIN.
+- [Classificador](https://github.com/splor-mg/classificador-receita).
+
+<!--s-->
+
+## Sonhos
+
+Notes:
+- Banco de dados grafos (ontologia orçamentária).
+- Estrutura conjuntos de dados abertos orçamentários.
+- Nova ferramenta de BI para substituir o Qlik view.
+- Formatos mais eficientes para publicação/divulgação da LOA.
+- Ganhos na utilização de projetos open sources para a administração pública.
+- Ganhos na utilização da filosofia Docs as code para a administração pública.
