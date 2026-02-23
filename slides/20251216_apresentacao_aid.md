@@ -67,6 +67,9 @@ Notes:
 ## Principais Projetos
 
 Notes:
+- Datamart:
+	- Banco de dados.
+	- Unificação de tecnologias (Python).
 - [Trilhadev](https://trilhadev.planejamento.mg.gov.br/).
 - Automatizações:
   - Feed.
