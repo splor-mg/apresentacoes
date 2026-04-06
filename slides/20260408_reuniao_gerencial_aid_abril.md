@@ -31,7 +31,7 @@ Note:
 
 - Maria já está ajudando Laura a passar código R para Python.
 - Importância do trilhadev na chegada de novos integrantes para equipe.
-- Importância na organização do onboarding da equipe em [Issues template](slides/20260201_reuniao_gerencial_aid_fevereiro.md), exemplo [Lorena](slides/20260201_reuniao_gerencial_aid_fevereiro.md).
+- Importância na organização do onboarding da equipe em [Issues template](https://github.com/splor-mg/onboarding/blob/main/.github/ISSUE_TEMPLATE/onboarding_aid.yml), exemplo [Lorena](https://github.com/splor-mg/onboarding/issues/13).
 
 <!--s-->
 
