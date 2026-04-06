@@ -1,0 +1,600 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+
+        <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/theme/solarized.css" />
+        
+        
+            <link rel="stylesheet" href="mkslides-assets/highlight-js-themes/monokai.css" />
+        
+
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="<!--s-->"
+                
+                    data-separator-vertical="<!--v-->"
+                
+                    data-separator-notes="^Notes?:"
+                
+                    data-charset="utf-8"
+                
+                >
+                    <!-- The markdown must be placed to the whole left to prevent indentation issues like https://github.com/MartenBE/mkslides/issues/52 -->
+                    <textarea data-template>
+# ETL
+
+Exemplos AID/SPLOR
+
+<!--s-->
+
+## O que é ETL?
+
+👉 ETL é o caminho que o dado percorre até se tornar informação útil.
+
+Note:
+
+- Integrar dados de diferentes fontes para aprimorar a **tomada de decisão**.
+
+<!--v-->
+
+## O que é ETL?
+
+- **Extract (Extrair)**: Coletar dados das fontes.
+- **Transform (Transformar)**: Tratar, padronizar e enriquecer os dados.
+- **Load (Carregar)**: Armazenar os dados prontos em um destino final.
+
+<!--v-->
+
+## O que é ETL?
+
+Por que ETL é necessário?
+
+Note:
+
+- Os dados não nascem prontos para análise.
+- Estão em múltiplos sistemas/planilhas/fontes.
+- Com formatos (nomes) diferentes.
+- Pensados para uso **operacional**, não analítico ([OLTP x OLAP](https://stackoverflow.com/questions/21900185/what-are-oltp-and-olap-and-what-is-the-difference-between-them)).
+
+<!--v-->
+
+## O que é ETL?
+
+Quais problemas enfrentamos sem processos de ETL?
+
+Note:
+
+- Cada nova análise vira um retrabalho.
+- Relatórios que não batem entre si.
+- Tempo excessivo gasto "arrumando dados" manualmente.
+- Dificuldade para reproduzir análises (falta de documentação).
+- Decisões baseadas em dados incompletos ou incorretos
+
+<!--v-->
+
+## O que é ETL?
+
+Contexto SPLOR:
+
+- **Extract (Extrair)**: Coletar dados SISOR, SIAFI, SIAD.
+- **Transform (Transformar)**: Padronizar nome de campos (UO - Unidade orçamentária)
+- **Load (Carregar)**: [Relatório operacional](http://200.198.9.184/Qlikview/index.htm).
+
+Note:
+
+- Repositórios GitHub iniciados com [dados](https://github.com/orgs/splor-mg/repositories?q=dados).
+- Aqui, vale a leitura do Issue [Estudar viabilidade de simplificar códigos repositórios ETL](https://github.com/splor-mg/atividades/issues/148).
+
+<!--v-->
+
+## O que é ETL?
+
+Contexto SPLOR:
+
+![bagunca](https://images.pexels.com/photos/5185074/pexels-photo-5185074.jpeg)
+
+Note:
+
+- Tecnologias:
+  - [Make](https://swcarpentry.github.io/make-novice/) para rodar comandos.
+  - R.
+  - Python.
+  - [The Data Package Standard](https://datapackage.org/overview/introduction/).
+  - Padrão frictionless de documentação
+  - Docker para instalar tudo.
+  - GitHub Actions para rodar em núvem.
+- Aqui, vale a leitura [deste comentário](https://github.com/splor-mg/atividades/issues/148#issuecomment-3587256329) no Issue [Estudar viabilidade de simplificar códigos repositórios ETL](https://github.com/splor-mg/atividades/issues/148), já citado, para entender um pouco mais esta divisão de responsabilidades.
+
+<!--s-->
+
+## Extract
+
+Tirar os dados de onde eles vivem.
+
+Note:
+
+- Acessar as fontes corretas.
+- Extrair os dados necessários.
+- Os dados são lidos, não alterados.
+- Garantir que a extração seja confiável e repetível.
+
+<!--v-->
+
+## Extract
+
+💡 Em ambientes reais, raramente existe uma única fonte.
+
+Note:
+
+- Bancos de dados relacionais (PostgreSQL, Oracle, MySQL).
+- Planilhas (Excel, CSV).
+- APIs (sistemas externos, serviços web).
+- Arquivos de texto ou logs.
+- SISOR, SIAFI, SIAD, Excel, CSV.
+
+<!--v-->
+
+## Extract
+
+O que NÃO é responsabilidade do Extract?
+
+Note:
+
+- Corrigir erros de dados (Transform).
+- Padronizar formatos (Transform).
+- Criar métricas (Transform).
+- Regras de negócio complexas (Transform).
+
+<!--v-->
+
+## Extract
+
+💡 Se a extração falhar, todo o ETL falha.
+
+Note:
+
+- A qualidade do ETL começa no Extract.
+
+<!--v-->
+
+## Extract
+
+Contexto SPLOR:
+
+- Target `make extract` chama comando `extract` existente no arquivo `main.py` (CLI).
+- Comando `extract` chama o script `extract_resource` no arquivo `scripts.extract`.
+- Script `extract_resource` chama o script do arquivo `scripts/extract.R` (R).
+
+<!--v-->
+
+## Extract
+
+Contexto SPLOR:
+
+![mão na massa](https://images.pexels.com/photos/3218467/pexels-photo-3218467.jpeg)
+
+<!--v-->
+
+## Extract
+
+Contexto SPLOR:
+
+```bash
+# clona repositório
+git clone git@github.com:splor-mg/dados-armazem-siafi-2025.git
+cd dados-armazem-siafi-2025
+
+# Acessa docker para rodar o comando de extração
+docker run -it --rm --mount type=bind,source=$PWD,target=/project splormg/dados-armazem-siafi-2025 bash
+make extract
+
+# Sai do container
+exit
+
+# Verifica modificação dos arquivos extraídos
+git status
+```
+
+Note:
+
+- Instalar Docker.
+- Necessário cadastrar credenciais gmail.
+
+<!--s-->
+
+## Datapackages
+
+Todo processo de ETL da SPLOR está baseado na utilização de datapackages.
+
+Note:
+
+- Forma de documentar (metadados) nossos dados.
+- Dados sobre os dados.
+- Conjunto de arquivos de texto onde descrevemos as características de nossos dados.
+- [Yaml](https://learnxinyminutes.com/yaml/).
+- [Json](https://learnxinyminutes.com/json/).
+- [Documentação Datapackage Standard](https://datapackage.org/overview/introduction/).
+- [Frictionless-py](https://framework.frictionlessdata.io/).
+
+<!--v-->
+
+## Datapackages
+
+Dados tabulares (linhas e colunas).
+
+![normalized_table](https://github.com/user-attachments/assets/2ef8bfd7-a364-4318-a698-a134a3ae67cd)
+
+Note:
+
+- Colunas: campos, qualidades ou atributos do seu dado.
+- Linhas: registros dos mesmos.
+
+<!--v-->
+
+## Datapackages
+
+> The Data Package Standard offers a structured and versatile framework for organizing, documenting, and distributing data.
+
+Note:
+
+- Principal vantagem: Ninguém vai mudar o nome das colunas do excel que você criou!
+- Princípios:
+  - Simplicidade.
+  - Flexibilidade.
+  - Reprodutibilidade.
+  - Interoperabilidade.
+
+<!--v-->
+
+## Datapackages
+
+Experimento mental
+
+- Se uma informação só existe com a pessoa que a gerou, e essa pessoa não está disponível, essa informação realmente existe?
+
+- Parafraseando [@mtholder](https://twitter.com/kcranstn/status/370914072511791104?s=20), você, de 6 meses atrás, não está mais disponível.
+
+Note:
+- [Experimento mental feito por Francisco CODA 2021](https://www.youtube.com/watch?v=JUW60w1jDdM&t=1346s).
+
+<!--v-->
+
+## Datapackages
+
+Estrutura modular dividida entre:
+
+- Table Schema.
+- Data Resource.
+- Data Package.
+
+<!--v-->
+
+## Datapackages
+
+Table Schema
+
+```
+# dados-armazem-siafi/schemas/cota.yaml
+fields:
+  - name: Ano de Exercício
+    type: integer
+    target: ano
+  - name: Poder Unid Orçamentária - Código
+    type: integer
+    target: poder_cod
+  - name: Unidade Orçamentária - Código
+    type: integer
+    target: uo_cod
+```
+
+Note:
+
+- [Table Schema documentation](https://datapackage.org/standard/table-schema/).
+- [Exemplo completo](https://github.com/splor-mg/dados-armazem-siafi-2025/blob/main/schemas/cota.yaml).
+- Nome dos seus campos.
+- Tipos de dados dos seus campos.
+
+<!--v-->
+
+## Datapackages
+
+Table Resource
+
+```
+# dados-armazem-siafi/datapackage.yaml
+resource:
+  - name: cota
+    type: table
+    path: ["data-raw/cota-item-data.csv"]
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect: dialect.yaml
+    schema: schemas/cota.yaml
+```
+
+Note:
+
+- [Table Resource documentation](https://datapackage.org/standard/data-resource/).
+- [Exemplo completo](https://github.com/splor-mg/dados-armazem-siafi-2025/blob/main/datapackage.yaml).
+- Informações sobre meu arquivo.
+
+<!--v-->
+
+Data Package
+
+```
+# dados-armazem-siafi/datapackage.yaml
+name: dados-armazem-siafi-2025
+title: Sistema Integrado de Administração Financeira – SIAFI 2025
+owner_org: secretaria-de-estado-de-planejamento-e-gestao-seplag
+resources:
+  - name: cota
+    type: table
+    path: ["data-raw/cota-item-data.csv"]
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect: dialect.yaml
+    schema: schemas/cota.yaml
+  - name: execucao
+    type: table
+    path: ["data-raw/execucao-siafi-01.csv"]
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect: dialect.yaml
+    schema: schemas/execucao.yaml
+```
+
+Note:
+
+- [Data Package documentation](https://datapackage.org/standard/data-package/).
+- Informações sobre meu conjunto.
+- Abrir [exemplo completo](https://github.com/splor-mg/dados-armazem-siafi-2025/blob/main/datapackage.yaml).
+
+<!--s-->
+
+# Frictionless-py
+
+![mão na massa](https://images.pexels.com/photos/3218467/pexels-photo-3218467.jpeg)
+
+<!--v-->
+
+# Frictionless-py
+
+Letters
+
+```
+# Vowels
+id;letter;vowel
+1;a;TRUE
+2;e;TRUE
+3;i;TRUE
+4;o;TRUE
+5;u;TRUE
+
+# Consonants
+id;letter;vowel
+1;b;FALSE
+2;c;FALSE
+3;d;FALSE
+4;f;FALSE
+5;g;FALSE
+6;h;FALSE
+7;j;FALSE
+8;k;FALSE
+9;l;FALSE
+10;m;FALSE
+11;n;FALSE
+12;p;FALSE
+13;q;FALSE
+14;r;FALSE
+15;s;FALSE
+16;t;FALSE
+17;v;FALSE
+18;w;FALSE
+19;x;FALSE
+20;y;FALSE
+21;z;FALSE
+```
+
+Note:
+
+```
+mkdir letters
+cd letters
+mkdir data
+mkdir schemas
+touch schemas/schema_v1.yaml
+touch schemas/dialect_v1.yaml
+touch data/vowels.csv
+touch data/consonants.csv
+# copy csv content
+touch datapackage.yaml
+echo "venv/" > .gitignore
+git init
+git add .
+git commit -m "Commit inicial"
+```
+
+<!--v-->
+
+# Frictionless-py
+
+datapackage.yaml
+
+```
+name: letters
+title: Letras do alfabeto
+resources:
+  - name: consonants
+    title: Consoantes
+    description: Este(a) recurso/tabela apresenta as consoantes do alfabeto.
+    type: table
+    path: data/consonants.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    schema: schemas/schema_v1.yaml
+    dialect: schemas/dialect_v1.yaml
+  - name: vowels
+    title: Vogais
+    description: Este(a) recurso/tabela apresenta as vogais do alfabeto.
+    type: table
+    path: data/vowels.csv
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    schema: schemas/schema_v1.yaml
+    dialect: schemas/dialect_v1.yaml
+```
+
+Note:
+
+```
+# Windows: python -m venv venv
+python3 -m venv venv
+# Windows: source venv/Scripts/activate
+source venv/bin/activate
+pip install frictionless
+frictionless validate datapackage.yaml
+```
+
+<!--v-->
+
+# Frictionless-py
+
+```
+frictionless describe data/vowels.csv --type resource --yaml
+frictionless validate
+```
+
+Note:
+
+- Não precisamos escrever tudo na mão!
+- [Documentação](https://framework.frictionlessdata.io/docs/guides/describing-data.html).
+- [Rubular](https://rubular.com/).
+
+```
+constraints:
+  required: true
+  maxLength: 1
+  unique: true
+  pattern: '^[a-z]$'
+```
+
+<!--v-->
+
+# Frictionless-py
+
+```
+mkdir scripts
+touch scripts/__init__.py
+touch scripts/pandas.py
+```
+
+```
+# scripts/pandas.py
+from frictionless import Package
+
+package = Package("datapackage.yaml")
+vogais_df = package.get_resource("vowels").to_pandas()
+consoantes_df = package.get_resource("consonants").to_pandas()
+```
+
+<!--v-->
+
+# Frictionless-py
+
+datapackage.json
+
+```
+# scripts/pandas.py
+from frictionless import Package
+
+package = Package("datapackage.yaml")
+vogais_df = package.get_resource("vowels").to_pandas()
+consoantes_df = package.get_resource("consonants").to_pandas()
+
+# https://chatgpt.com/share/697270fd-18dc-8003-b014-700e5c6e9322
+df = pd.concat([consoantes_df, vogais_df], ignore_index=True)
+df = df.sort_values("letter").reset_index(drop=True)
+df["id"] = df.index + 1
+df.to_csv("data/all_letters.csv", index=False)
+```
+
+Note:
+
+- [Porque datapackage.json?](https://datapackage.org/standard/data-package/#:~:text=MUST%20be%20named-,datapackage.json,-and%20it%20MUST).
+- Para casa: Construçao e validação do **datapackage.json**.
+
+<!--v-->
+
+![Área em contrução](https://prad.unifei.edu.br/dcc/wp-content/uploads/sites/3/2024/07/pagina_em.png)
+
+<!--
+TODO:
+
+Falar da frictionless, em todas as fases
+
+
+
+
+-->
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="mkslides-assets/reveal-js/dist/reveal.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/highlight/highlight.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/markdown/markdown.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/math/math.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/notes/notes.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/search/search.js"></script>
+        <script src="mkslides-assets/reveal-js/plugin/zoom/zoom.js"></script>
+
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                
+                plugins: [
+                    RevealMarkdown, // Must come before the other plugins so they can hook into the generated HTML.
+                    RevealHighlight,
+                    RevealMath.KaTeX,
+                    RevealNotes,
+                    RevealSearch,
+                    RevealZoom,
+
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>
