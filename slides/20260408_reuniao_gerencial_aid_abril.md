@@ -53,7 +53,7 @@ Note:
 - Maria ajudando.
 - Unificacao dos repositórios em [dados-orcamentarios](https://github.com/splor-mg/dados-orcamentarios).
   - Código Python unificado.
-  - Documentaão Unificada.
+  - Documentação unificada.
   - Erros em um só lugar.
   - Mais fácil de dar manutenção.
 - Ainda não estruturei o cronograma para 2026.
