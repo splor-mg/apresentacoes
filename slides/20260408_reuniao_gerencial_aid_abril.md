@@ -16,7 +16,6 @@ slides:
 - IA.
 - Ementário.
 - Capacitações.
-- Não previsto.
 - ???
 
 <!--s-->
@@ -30,7 +29,7 @@ slides:
 
 Note:
 
-- Maria já está por conta de ajudar Laura a passar código R para Python.
+- Maria já está ajudando Laura a passar código R para Python.
 - Importância do trilhadev na chegada de novos integrantes para equipe.
 - Importância na organização do onboarding da equipe em [Issues template](slides/20260201_reuniao_gerencial_aid_fevereiro.md), exemplo [Lorena](slides/20260201_reuniao_gerencial_aid_fevereiro.md).
 
@@ -65,60 +64,38 @@ Note:
 
 - Sisor (**Vou conversar com Nivaldo assim que passar o processo da LDO**).
 
-Note:
-
-- Henrique disse que está estudando como fazer o robô para alimentar o GRP, me coloquei a disposição para auxiliar.
-
 <!--s-->
 
 ## IA
 
-- Feed.
 - COFIN.
 - ChatSei.
 
 Note:
 
-- Manutenções no Feed ao longo de Janeiro.
-- **Novidade**: Gastamos em torno de $2,00 para rodar cada jornal.
-- Atualização apresentações da COFIN será feita em Março (Já conseguimos utilizar a [API do SharePoint](https://github.com/splor-mg/sharepoint-api-python)).
-- Previsão de 4 meses para iniciar testes ChatSei (Entre Maio e Junho).
-- Prêmio Sof: resultado preliminar dia 23/02/2026 e resultado definitivo dia 09/03/2026.
+- Manutenções no COFIN ao longo de Fevereiro e Março.
+  - Atualizações já estão sendo feitas automaticamente.
+  - Processo não quebra se apresentações mudarem de lugar (fluxo DCAF).
+  - Melhoria no processo de conversão de imagens em texo.
+- ChatSei começará a partir de agora.
 
 <!--s-->
 
 ## Ementário
 
-- **Novidade**: MVP apresentado hoje (11/02/2026) (**Laura participando**).
-
 Note:
-
-- Previsão para finalização em Outubro de 2026.
-- Mudei o nome para apenas ementário pois ele terá que servir para receitas e despesas.
-
+- MVP apresentado e funcionando.
+- Início da fase de teste em Abril.
 
 <!--s-->
 
 ## Capacitações
 
-- Primeira turma [Trilha-dev Python](https://trilhadev.planejamento.mg.gov.br/main/python/) prevista para iniciar em Abril 2026.
-- **Novidade**: Capacitações direcionadas para Vivi e Laura ([processos ETL](https://splor-mg.github.io/handbook/blog/category/etl/)) e automatizações DCAF.
+- Primeira aula [Trilha-dev Python dia 24 de Abril](https://github.com/splor-mg/trilha-dev/issues/64#issuecomment-4192802152) (dentro do prazo).
 
 Note:
 
-- Automatizações DCAF trabalhando com [reestimativa](https://github.com/splor-mg/reestimativa_2026).
-- [Análises e priorizações Laura](https://github.com/orgs/splor-mg/discussions/28).
-
-<!--s-->
-
-## Não previsto
-
-- Melhorias processo de geração da LOA.
-- Robôs GRP.
-
-Note:
-
-- LOA estava pensando no André, que não virá mais.
+- [Priorizações Laura](https://github.com/orgs/splor-mg/discussions/28): Comando da folha.
 
 <!--s-->
 
