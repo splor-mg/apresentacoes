@@ -79,8 +79,8 @@ _Exemplos_ :arrow_down:
 
 ## Desafios e reflexões
 
-* Ainda existe um fosso tencnológico no governo.
-* Não é facil, tampoco trivial.
+* Ainda existe um fosso tecnológico no governo.
+* Não é facil, tampouco trivial.
 * Talvez, não seja para todos mesmo.
 * Ser transformação vale a pena.
 
