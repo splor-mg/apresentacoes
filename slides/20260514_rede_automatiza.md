@@ -12,10 +12,9 @@ slides:
 
 ![foto](https://avatars.githubusercontent.com/u/166438302?v=4&size=256)
 
-- Servidora de carreira da Seplag
-- 8 anos de experiência de assessoria na Sejusp
-- Entuasiasta de tecnologia :rocket:
-- Passagem pelo Automatiza.MG
+- Servidora de carreira da Seplag.
+- 8 anos de experiência de assessoria na Sejusp.
+- Atualmente na _Assessoria de Inteligência de Dados_ da SPLOR/MG.
 
 <!--s-->
 
@@ -23,6 +22,7 @@ slides:
 
 ![foto](https://avatars.githubusercontent.com/u/49699290?v=4&size=256)
 
+- Docs as Code
 - _Git_
 - `Github`
 - **Versionamento**
