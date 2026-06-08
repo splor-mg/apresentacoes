@@ -68,6 +68,7 @@ Note:
 Note:
 
 - Andrey em conversa com Vivi e Tuli para projeto notas técnicas TCE.
+- Gestão de subscrição pela equipe Automatiza e Reunião com Henrique.
 
 <!--s-->
 
