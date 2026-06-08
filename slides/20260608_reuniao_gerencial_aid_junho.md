@@ -87,7 +87,7 @@ Note:
 
 - 6º encontro trilha-dev.
 - Último encontro exercícios no papel.
-- Apresentação do projeto no Python Sudeste
+- Apresentação do projeto no Python Sudeste.
 
 <!--s-->
 
