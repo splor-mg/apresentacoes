@@ -58,7 +58,7 @@ Note:
 
 Note:
 
-- Aguardando Fernando voltar de férias (Datalake).
+- Aguardando Fernanda voltar de férias (Datalake).
 
 <!--s-->
 
