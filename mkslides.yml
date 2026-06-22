@@ -1,9 +1,16 @@
 index:
-    enable_footer: true
-    title: Apresentações
+  enable_footer: true
+  title: Apresentações
+
 slides:
-    theme: solarized
-    charset: utf-8
-    separator: <!--s-->
-    separator_vertical: <!--v-->
-    separator_notes: "^Notes?:"
+  theme: solarized
+  charset: utf-8
+
+  separator: <!--s-->
+  separator_vertical: <!--v-->
+  separator_notes: "^Notes?:"
+
+plugins:
+  - name: RevealMermaid
+    extra_javascript:
+      - https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js
