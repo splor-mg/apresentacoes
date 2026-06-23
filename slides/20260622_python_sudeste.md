@@ -33,10 +33,10 @@ mindmap
     Servidor público
       Baixa qualificação tecnológica
       Medo
-        Tecnologia é difícl
-        Tecnologia substuirá o humano
+        Tecnologia é difícil
+        Tecnologia substiturá o humano
       Rotina e volume de trabalho excessivos
-        Poucas oportunidade de inovação e aprendizagem
+        Poucas oportunidades de inovação e aprendizagem
         Baixa autonomia de profissionais administrativos
     Infraestrutura tecnológica
       Máquinas e equipamentos antigos
@@ -62,6 +62,11 @@ mindmap
         Baixa autonomia para pequenas manutenções
 </pre>
 
+<!--s-->
+## E se ...
+
+_parte do nosso trabalho também fosse formar multiplicadores de tecnologia?_
+
 
 <!--s-->
 
@@ -78,9 +83,10 @@ _Se você tivesse o desafio de compartilhar conhecimento sobre tecnologia para m
 
 ## No que acreditamos
 
-* ampliar a *autonomia* dos profissionais
-* garantir a *perenidade* dos processos institucionais
-* fortalecer *capacidades* institucionais
+* ampliar a *autonomia* dos profissionais.
+* garantir a *perenidade* dos processos institucionais.
+* fortalecer *capacidades* institucionais.
+* Python como *linguagem acessível* para resolver problemas reais.
 
 <!--s-->
 
@@ -90,14 +96,14 @@ _Trilhas de aprendizagem para aproximação e evolução do conhecimento._
 
 | o que temos| futuros|
 | --- | --- |
-| [Trilha - Dev: Início da Jornada](https://trilhadev.planejamento.mg.gov.br/main/inicio_da_jornada/) | Trilha - Dev: Dados|
-[Trilha - Dev: Python](https://trilhadev.planejamento.mg.gov.br/main/python/)|Trilha Dev: Dev |
+|[Trilha - Dev: Início da Jornada](https://trilhadev.planejamento.mg.gov.br/main/inicio_da_jornada/)| Trilha - Dev: Dados|
+|[Trilha - Dev: Python](https://trilhadev.planejamento.mg.gov.br/main/python/)|Trilha - Dev: Dev|
 
 
 <!--s-->
 ## Início da Jornada
 `Conteúdo`
-* Docs as Code: _aproximação com o servidor que lida com documentos_.
+* Doc as Code: _aproximação com o servidor que lida com documentos_.
 * Git e Github: _solução para versionamento de documentos_.
 * Ambiente de desenvolvimento: _editor de texto e terminal_.
 * Ferramentas e frameworks: _Mkdocs_.
@@ -132,7 +138,7 @@ _Trilhas de aprendizagem para aproximação e evolução do conhecimento._
 
 * `17` inscritos.
 * `5` projetos desenvolvidos.
-* _Alto envolvimento  e interesse_ dos participantes.
+* _Alto envolvimento e interesse_ dos participantes.
 * Identificação de perfis com _alta aptidão_ para o tema, mas ainda especialistas de outras áreas.
 
 <!--s-->
@@ -174,9 +180,9 @@ _Trilhas de aprendizagem para aproximação e evolução do conhecimento._
 _(por enquanto)_
 
 * Aumento da dificuldade técnica, menor adesão.
-* Dificuldade de conexão entre o instrumental da liguagem com o seu uso prático.
+* Dificuldade de conexão entre o instrumental da linguagem com o seu uso prático.
 * Existe uma barreira na comunicação.
-* Não é facil, tampouco trivial.
+* Não é fácil, tampouco trivial.
 * Talvez, não seja para todos mesmo.
 
 <!--s-->
@@ -187,14 +193,24 @@ O sucesso de um projeto não depende apenas da qualidade técnica da solução, 
 
 **Qual o nosso papel?**
 
+<!--s-->
+
+> Não estamos ensinando Python para formar programadores.
+
+Estamos ensinando Python para:
+
+* ampliar a autonomia.
+* reduzir dependências.
+* fortalecer processos.
+* aproximar tecnologia e negócio.
 
 <!--s-->
 
 ## Perguntas importantes
 
 * Quando você produz conteúdo (documentação técnica ou tutoriais) em quem você está pensando?
-* Qual a liguagem você usa quando explica algo técnico para alguém?
-* Você se enxerga no paple de traduzir e compartilhar esse conhecimento com públicos diversos?
+* Qual a liguagem que você usa quando explica algo técnico para alguém?
+* Você se enxerga no papel de traduzir e compartilhar esse conhecimento com públicos diversos?
 
 <!--s-->
 
