@@ -607,14 +607,14 @@ files = [
 
 [[package]]
 name = "mkslides"
-version = "2.0.15"
+version = "2.0.18"
 description = "MkSlides - Slides with Markdown using the power of Reveal.js."
 optional = false
 python-versions = ">=3.13"
 groups = ["main"]
 files = [
-    {file = "mkslides-2.0.15-py3-none-any.whl", hash = "sha256:0ad5721c0b7cfb09f5e350bbd6b22696afbf5a06987f56066535ab0b72471f1d"},
-    {file = "mkslides-2.0.15.tar.gz", hash = "sha256:028123604ca40c5e8f4c082a95fbc93c28b5b5ce58a2641aa51b30728b172894"},
+    {file = "mkslides-2.0.18-py3-none-any.whl", hash = "sha256:386109b826d1c2fca90f0b6439ac41fb4b85fc911dc6242bfc9df8cf571996a4"},
+    {file = "mkslides-2.0.18.tar.gz", hash = "sha256:a710a7a14d37c6e399a0b72d497e076f1a6b4c6bc12c2b5ac288e7aa07554fa3"},
 ]
 
 [package.dependencies]
