@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+
+        <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/theme/dracula.css" />
+        
+        
+            <link rel="stylesheet" href="mkslides-assets/highlight-js-themes/monokai.css" />
+        
+
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="<!--s-->"
+                
+                    data-separator-vertical="<!--v-->"
+                
+                    data-separator-notes="^Notes?:"
+                
+                    data-charset="utf-8"
+                
+                >
+                    <!-- The markdown must be placed to the whole left to prevent indentation issues like https://github.com/MartenBE/mkslides/issues/52 -->
+                    <textarea data-template>
+# ETL
+
+E o contexto da AID/SPLOR
+
+Note:
+
+- Lembrar de logar bitwarden AID para mostrar relatório operacional.
+- [Baseado em apresentação ETL anterior](20260109_etl.html).
+- [Arroz com feijão previsto nas nossas competências (**Art 36 do Decreto nº 48.636, de 19/06/2023**)](https://www.almg.gov.br/legislacao-mineira/texto/DEC/48636/2023/#:~:text=processos%20da%20Subsecretaria.-,Art.%2036,-%E2%80%93%20A%20Assessoria%20de):
+  - Propor a arquitetura de dados analíticos que garanta a qualidade e a disponibilidade das informações necessárias aos processos de tomada de decisão da SPLOR.
+  - Planejar o modelo de dados de suporte aos processos de inteligência analítica.
+- Notas dos slides contém links para consultas.
+
+<!--s-->
+
+## O que é ETL?
+
+👉 ETL é o caminho que o dado percorre até se tornar informação útil.
+
+Note:
+
+- **O obvio precisa ser dito**.
+- Integrar dados de diferentes fontes para aprimorar a **tomada de decisão**.
+- Um processo mecânico.
+- Não envolve análise de dados.
+- Uma sigla, um [acrónimo](https://pt.wikipedia.org/wiki/Acr%C3%B3nimo):
+  - **Extract (Extrair)**: Coletar dados das fontes.
+  - **Transform (Transformar)**: Tratar, padronizar e enriquecer os dados.
+  - **Load (Carregar)**: Armazenar os dados prontos em um destino final (análise de dados e tomada de decisão).
+
+<!--v-->
+
+## O que é ETL?
+
+Por que ETL é necessário?
+
+Note:
+
+- Dados quase sempre estão espalhados em múltiplas fontes.
+- Dados nascem para um contexto **operacional**, não analítico ([OLTP x OLAP](https://stackoverflow.com/questions/21900185/what-are-oltp-and-olap-and-what-is-the-difference-between-them)):
+  - OLTP: On-line Transaction Processing.
+  - OLAP: On-line Analytical Processing.
+- Tempo excessivo gasto "arrumando dados" manualmente fazendo cada nova análise vira um retrabalho.
+- Relatórios que não batem entre si.
+
+<!--v-->
+
+## O que é ETL?
+
+Experimento mental
+
+- Se uma informação só existe com a pessoa que a gerou, e essa pessoa não está disponível, essa informação realmente existe?
+
+- Parafraseando [@mtholder](https://twitter.com/kcranstn/status/370914072511791104?s=20), você, de 6 meses atrás, não está mais disponível.
+
+Note:
+- Quais problemas enfrentamos sem processos de ETL?
+- [Experimento mental feito por Francisco CODA 2021](https://www.youtube.com/watch?v=JUW60w1jDdM&t=1346s).
+- Dificuldade para reproduzir análises (falta de documentação).
+- Decisões baseadas em dados incompletos ou incorretos.
+
+
+<!--v-->
+
+## O que é ETL?
+
+Contexto SPLOR:
+
+- **Extract (Extrair)**: Coletar dados SISOR/[PPO](https://ppo.mg.gov.br/), SIAFI, SIAD, SharePoint.
+- **Transform (Transformar)**: Padronizar nome de campos (UO - Unidade orçamentária)
+- **Load (Carregar)**: [Relatório operacional](http://200.198.9.184/Qlikview/index.htm).
+
+Note:
+
+- Repositórios GitHub iniciados com [dados](https://github.com/orgs/splor-mg/repositories?q=dados).
+- Aqui, vale a leitura do Issue [Estudar viabilidade de simplificar códigos repositórios ETL](https://github.com/splor-mg/atividades/issues/148).
+
+<!--v-->
+
+## O que é ETL?
+
+Contexto SPLOR:
+
+![bagunca](https://images.pexels.com/photos/5185074/pexels-photo-5185074.jpeg)
+
+Note:
+
+- Tecnologias:
+  - [Make](https://swcarpentry.github.io/make-novice/) para rodar comandos.
+  - R.
+  - Python.
+  - [The Data Package Standard](https://datapackage.org/overview/introduction/).
+  - Padrão frictionless de documentação
+  - Docker para instalar tudo.
+  - GitHub Actions para rodar em núvem.
+- Aqui, vale a leitura [deste comentário](https://github.com/splor-mg/atividades/issues/148#issuecomment-3587256329) no Issue [Estudar viabilidade de simplificar códigos repositórios ETL](https://github.com/splor-mg/atividades/issues/148), já citado, para entender um pouco mais esta divisão de responsabilidades.
+
+<!--s-->
+
+## Extract
+
+Tirar os dados de onde eles vivem.
+
+Note:
+
+- Acessar as fontes corretas.
+- Extrair os dados necessários.
+- Os dados são lidos, não alterados.
+- Garantir que a extração seja confiável e repetível.
+
+<!--v-->
+
+## Extract
+
+💡 Em ambientes reais, raramente existe uma única fonte.
+
+Note:
+
+- Bancos de dados relacionais (PostgreSQL, Oracle, MySQL).
+- Planilhas (Excel, CSV).
+- APIs (sistemas externos, serviços web).
+- Arquivos de texto ou logs.
+- SISOR, SIAFI, SIAD, Excel, CSV.
+
+<!--v-->
+
+## Extract
+
+O que NÃO é responsabilidade do Extract?
+
+Note:
+
+- Corrigir erros de dados (Transform).
+- Padronizar formatos (Transform).
+- Criar métricas (Transform).
+- Regras de negócio complexas (Transform).
+
+<!--v-->
+
+## Extract
+
+💡 Se a extração falhar, todo o ETL falha.
+
+Note:
+
+- A qualidade do ETL começa no Extract.
+
+<!--v-->
+
+## Extract
+
+Contexto atual SPLOR
+
+![mão na massa](https://images.pexels.com/photos/3218467/pexels-photo-3218467.jpeg)
+
+<!--v-->
+
+## Extract
+
+Contexto atual SPLOR
+
+- Target `make extract` chama comando `extract` existente no arquivo `main.py` (CLI).
+- Comando `extract` chama o script `extract_resource` no arquivo `scripts.extract`, que chama o script R `scripts/extract.R`.
+
+<!--v-->
+
+## Extract
+
+Contexto atual SPLOR
+
+```bash
+# clona repositório
+git clone git@github.com:splor-mg/dados-armazem-siafi-2026.git
+cd dados-armazem-siafi-2026
+
+# Acessa docker para rodar o comando de extração
+docker run -it --rm --mount type=bind,source=$PWD,target=/project splormg/dados-armazem-siafi-2026 bash
+make extract
+
+# Sai do container
+exit
+
+# Verifica modificação dos arquivos extraídos
+git status
+```
+
+Note:
+
+- Rodar no [GitHub Actions](https://github.com/splor-mg/dados-armazem-siafi-2026/actions/workflows/all.yaml).
+
+<!--s-->
+
+## dpetl extract
+
+Note:
+
+- [dpetl](https://github.com/splor-mg/dpetl).
+- CLI Python para orquestrar as 3 fases do processo de ETL junto com a [especificação de metadados Datapackage](https://datapackage.org/overview/introduction/).
+
+<!--v-->
+
+## Datapackages
+
+> The Data Package Standard offers a structured and versatile framework for organizing, documenting, and distributing data.
+
+Note:
+
+- Todo processo de ETL da SPLOR está baseado na utilização [do padrão Datapackage](https://datapackage.org/overview/introduction/).
+- Parafraseando [@mtholder](https://twitter.com/kcranstn/status/370914072511791104?s=20), **você, de 6 meses atrás, não está mais disponível**.
+- Forma de documentar (metadados) nossos dados.
+- Princípios:
+  - Simplicidade.
+  - Flexibilidade.
+  - Reprodutibilidade.
+  - Interoperabilidade.
+- Na prática, é um conjunto de arquivos de texto onde descrevemos as características de nossos dados.
+  - [Yaml](https://learnxinyminutes.com/yaml/).
+  - [Json](https://learnxinyminutes.com/json/).
+- Principal vantagem: Ninguém vai mudar o nome das colunas do excel que você criou!
+
+<!--v-->
+
+## Datapackages
+
+Dados tabulares (linhas e colunas).
+
+![normalized_table](https://github.com/user-attachments/assets/2ef8bfd7-a364-4318-a698-a134a3ae67cd)
+
+Note:
+
+- Colunas: campos, qualidades ou atributos do seu dado.
+- Linhas: registros dos mesmos.
+
+<!--v-->
+
+## Datapackages
+
+Estrutura modular dividida entre:
+
+- Table Schema.
+- Data Resource.
+- Data Package.
+
+<!--v-->
+
+## Datapackages
+
+Table Schema
+
+```
+# dados-armazem-siafi/schemas/cota.yaml
+fields:
+  - name: Ano de Exercício
+    type: integer
+    target: ano
+  - name: Poder Unid Orçamentária - Código
+    type: integer
+    target: poder_cod
+  - name: Unidade Orçamentária - Código
+    type: integer
+    target: uo_cod
+```
+
+Note:
+
+- [Table Schema documentation](https://datapackage.org/standard/table-schema/).
+- [Exemplo completo](https://github.com/splor-mg/dados-armazem-siafi-2025/blob/main/schemas/cota.yaml).
+- Nome dos seus campos.
+- Tipos de dados dos seus campos.
+
+<!--v-->
+
+## Datapackages
+
+Table Resource
+
+```
+# dados-armazem-siafi/datapackage.yaml
+resource:
+  - name: cota
+    type: table
+    path: ["data-raw/cota-item-data.csv"]
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect: dialect.yaml
+    schema: schemas/cota.yaml
+```
+
+Note:
+
+- [Table Resource documentation](https://datapackage.org/standard/data-resource/).
+- [Exemplo completo](https://github.com/splor-mg/dados-armazem-siafi-2025/blob/main/datapackage.yaml).
+- Informações sobre meu arquivo.
+
+<!--v-->
+
+## Datapackages
+
+Data Package
+
+```
+# dados-armazem-siafi/datapackage.yaml
+name: dados-armazem-siafi-2025
+title: Sistema Integrado de Administração Financeira – SIAFI 2025
+owner_org: secretaria-de-estado-de-planejamento-e-gestao-seplag
+resources:
+  - name: cota
+    type: table
+    path: ["data-raw/cota-item-data.csv"]
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect: dialect.yaml
+    schema: schemas/cota.yaml
+  - name: execucao
+    type: table
+    path: ["data-raw/execucao-siafi-01.csv"]
+    scheme: file
+    format: csv
+    mediatype: text/csv
+    encoding: utf-8
+    dialect: dialect.yaml
+    schema: schemas/execucao.yaml
+```
+
+<!--s-->
+
+## dpetl extract
+
+```
+# Servidores Splor
+name: dados-servidores-splor
+title: Dados Servidores SPLOR
+resources:
+  - name: servidores
+    type: table
+    path: data_raw/servidores.xlsx
+    scheme: file
+    format: xlsx
+    mediatype: application/vnd.ms-excel
+    encoding: utf-8
+    schema: schemas/servidores.yaml
+    dpetl_extract:
+      mode: email
+      mailbox: INBOX        # optional (Defaults to INBOX)
+      criteria:             # optional
+        subject: "RES: Consulta BO para SPLOR-MG"
+        from_: "joao.lima@planejamento.mg.gov.br"
+        #date_gte: 2026-06-29 #optional (See also the flag --today-email)
+```
+
+Note:
+
+- Criar pasta, utilizar poetry, instalar dpetl, criar .env (gestor de senha)
+
+<!--s-->
+
+## dpetl extract
+
+E ai?
+
+<!--s-->
+
+![Área em contrução](https://prad.unifei.edu.br/dcc/wp-content/uploads/sites/3/2024/07/pagina_em.png)
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="mkslides-assets/reveal-js/dist/reveal.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/highlight.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/markdown.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/math.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/notes.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/search.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/zoom.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                
+                plugins: [
+                    RevealMarkdown, // Must come before the other plugins so they can hook into the generated HTML.
+                    RevealHighlight,
+                    RevealMath.KaTeX,
+                    RevealNotes,
+                    RevealSearch,
+                    RevealZoom,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>
