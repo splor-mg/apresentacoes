@@ -27,7 +27,7 @@ slides:
 Note:
 
 - Toda animada.
-- Definiremos ao longo do mês sua atuação.
+- [Plataforma de definição de critérios orçamentários](https://youtu.be/_2_tJPAMNiQ).
 
 <!--s-->
 
@@ -48,7 +48,7 @@ Note:
 
 - Finalizando ETL unificado com Maria (mais um mês).
 - Raiane e Andrey estudando melhor formato do Banco de dados.
-- Raiane e eu já recriamos o código linktable.
+- Raiane e eu já [recriamos o código linktable](https://github.com/gabrielbdornas/reprex/blob/20260714_linktable/scripts/main.py).
 - Estagiários e Vivi recriando Qlik em outra ferramentas.
 - Guilherme me ajudando a entender Rel. Operacional.
 
