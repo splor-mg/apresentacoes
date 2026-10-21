@@ -1,7 +1,7 @@
 ---
 slides:
   title: Modernização do Processo de Produção de Dados Splor
-  theme: night
+  theme: moon
 revealjs:
   width: 1920
   height: 1080
@@ -14,12 +14,95 @@ revealjs:
 <div class="r-hstack" style="align-items:flex-start; gap:80px">
 <div style="flex:1">
 
-## De um _processo fragmentado_ para uma _estrutura padronizada de dados_
+## De um [processo fragmentado]() para uma [estrutura padronizada de dados]()
 ---
 
-- Em 2026, avançamos na modernização do nosso processo de preparação de dados, integrando a extração, a transformação e a organização das informações em uma estrutura comum, documentada e reutilizável.
+- **Em 2026, avançamos na modernização do nosso processo de preparação de dados, integrando a extração, a transformação e a organização das informações em uma estrutura comum, documentada e reutilizável.**
 
-- O resultado esperado é **reduzir a complexidade da manutenção**, **diminuir etapas intermediárias**, **facilitar a continuidade do trabalho** e **criar uma base mais consistente para a produção de painéis e relatórios de análise orçamentária**.
+- **O resultado esperado é [reduzir a complexidade da manutenção](), [diminuir etapas intermediárias](), [facilitar a continuidade do trabalho]() e [criar uma base mais consistente para a produção de painéis e relatórios de análise orçamentária]().**
+
+<!--s-->
+
+## Guia de Sobrevivência Aid
+
+- Respositório
+- Datapackage
+- CLI
+
+[![](https://mermaid.ink/img/pako:eNpNkUFu2zAQRa9CzFo2RFlSbG6dTYEWBYqsKnUxEccy4ZBUh1SQxPCpeoRcLLTkCgY4wJ_5-G9I8Ayd1wQKVqtVy63rvDuYXl2lECd0z-im5mbPk9n9RYMPJn7-Y-Ob--bP7AuhfRean06T8NyjMx9ofRDpIP8dzWsSyRFHE6Zc51NARMZnfDn69Y3yiBEH7E7YU3Onlx1Mic_Ezd7bBKDQMb2SndgDavZ3azVqH_6D99-_NakW0IAciJ8oxHBjTbHOW3QpdvVR0Bt1Y0QWqeiACwwy6NloUAd8CZSBJbZ47eF8tVuIR7LUgkpSI59aaN0lhQZ0v723oCKPKcZ-7I8LZBw0Rno02DPaZTo_eO9HF0FtqyID0iZ6_jH_4_SdExjUGd5ArWSZr-VuU9SylA95UdUZvIN6qOv1dlMU210tZVnkm0sGH9NV8vVOFtuyqsuq3JS5rOTlC6JHuf4?type=png)](https://mermaid.live/edit#pako:eNpNkcFu2zAMhl9F4NkJPE92XF3Ty4AWA4adZu_AWowjpBY9Si66BnmqPcJebIqdGQFE4Cd__B8l6AwdWwIDm82mldZ37A-uN1ep1An9C_q5udnLZHG_0cjBxb9_xHFz3_xcfKUsd6H56i0plh69-8CBg0oH5dfk3pJIjjq6MOc6TgEVBV_w9cjbG-URI47YnbCn5k6vO4QSX0iaPQ8JQKETeqNhZo9ohe_WWrQc_oP3T1-aVCtoRAkk3ynEcGPNsY4H9Cl29VHRO3VTRFGp6IArDDLoxVkwB3wNlMFAMuC1h_PVbiEeaaAWTJIW5dRC6y8pNKL_wTyAiTKlmPDUH1fINFqM9OiwFxzW6fLgPU8-gqnLTxmQdZHlefnH-TtnMJgzvIPZPOitLou6qqqHMt8VusjgN5idrrd5rnefy1rruq7LSwYf81Xyba1LnRdVlSeRV3lx-Qepxrol)
+
+<!--v-->
+
+## Repositório
+
+- Pasta de arquivos
+- Qualquer tipo de arquivo: scripts, dados, imagens, pdf, etc.
+- Possui histórico (git).
+- Está na nuvem (Github).
+
+<!--v-->
+
+## Data package
+- Ficha técnica que acompanha os dados (planilha ou conjunto de dados).
+- [Frictioneless](https://frictionlessdata.io/): padroniza a descrição dos campos, formatos, arquivos e propriedades.
+- Essa padronização permite que diferentes bases sejam descritas de uma maneira comum, facilitando sua manutenção, validação e processamento automatizado.
+
+<!--v-->
+<div class="r-hstack" style="align-items:flex-start; gap:80px">
+<div style="flex:1">
+
+```yaml
+{
+  "name": "dados-armazem-siafi-2026",
+  "title": "Sistema Integrado de Administração Financeira – SIAFI 2026",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "execucao",
+      "type": "table",
+      "title": "execucao",
+      "profile": "tabular-data-resource",
+      "path": "data/execucao.csv.gz",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "compression": "gz",
+      "encoding": "utf-8",
+      "hash": "sha256:086e40c05af96c817d6c996fac4558990447beecf35d3df51798bd72ea7001fd",
+      "bytes": 24790377,
+      "fields": 30,
+      "rows": 914729,
+      "schema": {
+        "fields": [
+          {
+            "name": "ano",
+            "type": "integer",
+            "source": "Ano de Exercício"
+          },
+          {
+            "name": "uo_cod",
+            "type": "integer",
+            "source": "Unidade Orçamentária - Código"
+          },
+          {
+            "name": "ue_cod",
+            "type": "integer",
+            "source": "Unidade Executora - Código"
+          },
+        ]
+      }
+    }
+  ]
+}
+```
+
+<!--v-->
+
+## CLI
+
+- _Command-Line Interface_: É uma forma de interagir com um programa por meio de comandos e argumentos digitados em um terminal.
+- A ferramenta executa a tarefa solicitada por excrito em vez de navegar por botões, menus e cliques.
+- Permite transformar uma tarefa em uma operação padronizada e repetível, que pode ser executada por uma pessoa ou por uma máquina e, por isso, incorporada a um fluxo automatizado.
 
 <!--s-->
 
@@ -28,29 +111,23 @@ revealjs:
 
 ### Antes
 
-**Sistemas transacionais - BO**
-
-_(Fontes dos dados)_
-
-↓
-
 **Extração de relatórios no BO**
 
 _(Rotinas distribuídas em vários repositórios)_
 
-↓
+[↓]()
 
 **Envio por e-mail**
 
 _(Recebimento e divisão dos arquivos)_
 
-↓
+[↓]()
 
 **Scripts em R e Python**
 
 _(Preparação e transformação dos dados)_
 
-↓
+[↓]()
 
 **QlikView**
 
@@ -61,31 +138,31 @@ _(Carga e utilização nos painéis e relatórios)_
 
 ### Depois
 
-**Sistemas transacionais - BO**
-
-_(Fontes dos dados)_
-
-↓
-
 **BOCLI**
 
 _(Download direto de dados, sem o intermediários)_
 
-↓
+[↓]()
 
 **Dados-orcamentarios**
 
 _(Descrição padronizada dos conjuntos de dados)_
 
-↓
+[↓]()
 
 **Dpetl + Linktable + Zendt**
 
-_(Transformaçao,aplicação de regras orçamentárias)_
+_(Transformaçâo e aplicação de regras orçamentárias)_
 
-↓
+[↓]()
 
-**QlikView**/ **Metabase**
+**Datamart**
+
+(Banco de dados Orçamentários)
+
+[↓]()
+
+**Ferramenta de visualização de dados**
 
 _(Painéis e relatórios)_
 
@@ -95,7 +172,7 @@ _(Painéis e relatórios)_
 
 ## Problema:
 
-- O repositório do datapackage contém:
+- O repositório do datapackage contém
   - dados brutos
   - dados processados
   - schemas
