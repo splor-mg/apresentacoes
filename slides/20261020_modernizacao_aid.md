@@ -101,7 +101,7 @@ revealjs:
 ## CLI
 
 - _Command-Line Interface_: É uma forma de interagir com um programa por meio de comandos e argumentos digitados em um terminal.
-- A ferramenta executa a tarefa solicitada por excrito em vez de navegar por botões, menus e cliques.
+- A ferramenta executa a tarefa solicitada por escrito em vez de navegar por botões, menus e cliques.
 - Permite transformar uma tarefa em uma operação padronizada e repetível, que pode ser executada por uma pessoa ou por uma máquina e, por isso, incorporada a um fluxo automatizado.
 
 <!--s-->
