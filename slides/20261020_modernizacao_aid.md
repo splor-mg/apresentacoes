@@ -228,16 +228,20 @@ Um repositório central que organiza os metadados dos dados e coordena a execuç
 
 [Biblioteca](https://pypi.org/project/dpetl/) desenvolvida pela equipe da AID para executar as etapas de extração, transformação e carga de dados de forma padronizada e reutilizável.
 
-**Um fluxo comum de processamento**
+
+[Um fluxo comum de processamento]()
 - **Extrair:** obter dados de diferentes fontes e por diferentes métodos.
-- **Transformar:** padronizar arquivos e metadados, aplicar anonimização quando necessária e validar os dados.
+- **Transformar:** padronizar arquivos e metadados, aplicar anonimização e validações quando necessárias.
 - **Carregar:** publicar os dados processados e suas descrições nos repositórios de destino.
 
-**Evolução das capacidades**
+[Evolução das capacidades]()
 - Integração da *linktable* para relacionar diferentes conjuntos de dados.
-- Integração do Zendt para aplicar regras orçamentárias durante a transformação.
+- Integração do *Zendt* para aplicar regras orçamentárias durante a transformação.
+
+[↓]()
 
 **Uma base comum para processar diferentes conjuntos de dados, incorporar regras de negócio e reduzir a necessidade de soluções específicas para cada fluxo.**
+
 
 <!--s-->
 ## Zendt
@@ -327,7 +331,23 @@ credito
 ** inserir link para a link funcionando **
 
 <!--s-->
-## Datamart + Ferramenta de visualização de dados
 
+<div class="r-hstack" style="align-items:flex-start; gap:80px">
+<div style="flex:1">
 
+## Datamart
+
+- Banco de dados que irá reunir todo o universo de dados orçamentários.
+- Histórico e dados atualizados em um só lugar.
+
+</div>
+<div style="flex:1">
+
+## Ferramenta de visualização de dados
+
+- Ferramenta Open Source.
+- Liberdade para criar relatórios e painéis.
+
+</div>
+</div>
 <!--s-->
