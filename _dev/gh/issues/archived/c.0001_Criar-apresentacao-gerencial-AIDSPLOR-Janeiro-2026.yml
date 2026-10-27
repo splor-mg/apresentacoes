@@ -1,0 +1,73 @@
+---
+title: Criar apresentação gerencial AID/SPLOR Janeiro 2026
+state: C
+author: gabrielbdornas
+created: '2026-01-05T22:06:14Z'
+updated: '2026-01-05T22:20:47Z'
+closed: '2026-01-05T22:20:32Z'
+assignees:
+- gabrielbdornas
+labels:
+- chore
+- documentation
+type: 1 - Alta
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Rotina
+  Planejado: Sim
+  Data início: '2026-01-05'
+  Data de vencimento: '2026-01-05'
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  Reunião será realizada dia 06/01/2026.
+  
+  
+  
+---
+# regs
+
+- date: 2026-01-05T22:06:14Z
+  reg: project:added:project
+  author: gabrielbdornas
+
+- date: 2026-01-05T22:06:17Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-01-05T22:20:32Z
+  reg: state:closed
+  author: gabrielbdornas
+
+- date: 2026-01-05T22:20:33Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-01-05T22:20:37Z
+  reg: assignee:added:gabrielbdornas
+  author: gabrielbdornas
+
+- date: 2026-01-05T22:20:41Z
+  reg: label:added:documentation
+  author: gabrielbdornas
+
+- date: 2026-01-05T22:20:43Z
+  reg: label:added:chore
+  author: gabrielbdornas
+---

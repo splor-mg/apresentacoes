@@ -1,0 +1,32 @@
+---
+title: Sync template updates on 2026-02-05T18:58:11
+state: MERGED
+draft: false
+author: github-actions
+created: '2026-02-05T18:58:17Z'
+updated: '2026-10-13T13:57:47Z'
+closed: '2026-02-10T17:14:54Z'
+merged: '2026-02-10T17:14:54Z'
+base: main
+head: sync-template
+labels: []
+milestone: null
+assignees: []
+reviewers: []
+---
+# description
+
+body: |-
+  🤖 **Automated template sync**
+  
+  This pull request was automatically created by the
+  **`Sync template from upstream`** workflow.
+  
+  🔗 Run details:
+  https://github.com/splor-mg/apresentacoes/actions/runs/21724501779/job/62662848941
+  
+  📦 Source: `upstream/main`
+---
+# regs
+
+---

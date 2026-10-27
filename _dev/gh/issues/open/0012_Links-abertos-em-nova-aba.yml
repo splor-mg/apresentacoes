@@ -1,0 +1,58 @@
+---
+title: Links abertos em nova aba
+state: O
+author: gabrielbdornas
+created: '2026-06-25T19:39:22Z'
+updated: '2026-06-25T19:39:22Z'
+closed: null
+assignees: []
+labels: []
+type: null
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Backlog
+  Projeto: null
+  Planejado: null
+  Data início: null
+  Data de vencimento: null
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  Atualmente, links são abertos na aba atual, o que gera um desconforto durante a realização da apresentação.
+  
+  ### Lista de atividades e/ou correções
+  
+  - [ ] Atividade/Correção 1
+  - [ ] Atividade/Correção 2
+  - [ ] Atividade/Correção 3
+  
+  ### Participantes    
+  
+  @...
+  
+---
+# regs
+
+- date: 2026-06-25T19:39:23Z
+  reg: project:added:project
+  author: gabrielbdornas
+
+- date: 2026-06-25T19:39:24Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+---

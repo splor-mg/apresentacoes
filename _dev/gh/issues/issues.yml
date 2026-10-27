@@ -1,0 +1,107 @@
+name: issues
+account: splor-mg
+
+data:
+  issues_amount: 11
+  issues_open: 2
+  issues_closed: 9
+  issues_closed_%: 82
+  issues_todo: 1
+  issues_in_progress: 0
+  issues_review: 0
+  issues_waiting: 0
+  last_issue_id_created: 18
+  last_issue_id_closed: 13
+  last_issue_created: '2026-10-27T19:10:05Z'
+  last_issue_closed: '2026-10-13T14:02:47Z'
+  last_issue_updated: '2026-10-27T19:14:46Z'
+  last_user_auth: carloshob
+
+issues:
+- number: 1
+  title: Criar apresentação gerencial AID/SPLOR Janeiro 2026
+  status: CLOSED
+  author: gabrielbdornas
+  created: '2026-01-05T22:06:14Z'
+  closed: '2026-01-05T22:20:32Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/1
+
+- number: 2
+  title: Criar apresentação ETL
+  status: CLOSED
+  author: gabrielbdornas
+  created: '2026-01-06T21:55:41Z'
+  closed: '2026-01-09T13:27:56Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/2
+
+- number: 3
+  title: Publicação automática dos slides não está funcionando
+  status: CLOSED
+  author: gabrielbdornas
+  created: '2026-01-20T13:34:25Z'
+  closed: '2026-02-05T19:51:46Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/3
+
+- number: 4
+  title: Criar apresentação sobre qlik
+  status: CLOSED
+  author: gabrielbdornas
+  created: '2026-02-05T13:56:24Z'
+  closed: '2026-02-05T21:15:49Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/4
+
+- number: 7
+  title: Criar apresentação sobre metodologia AID de controle de tarefas
+  status: CLOSED
+  author: gabrielbdornas
+  created: '2026-03-25T18:16:07Z'
+  closed: '2026-07-20T20:43:55Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/7
+
+- number: 9
+  title: Criar apresentação para o Python Sudeste
+  status: CLOSED
+  author: raianecardoso
+  created: '2026-06-03T14:51:40Z'
+  closed: '2026-06-23T20:27:30Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/9
+
+- number: 11
+  title: Workflow Publish Slides Failed
+  status: CLOSED
+  author: raianecardoso
+  created: '2026-06-23T20:30:25Z'
+  closed: '2026-06-23T20:30:41Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/11
+
+- number: 12
+  title: Links abertos em nova aba
+  status: OPEN
+  author: gabrielbdornas
+  created: '2026-06-25T19:39:22Z'
+  closed: null
+  url: https://github.com/splor-mg/apresentacoes/issues/12
+
+- number: 13
+  title: Sync template workflow failed on 2026-09-21T04:11:34
+  status: CLOSED
+  author: github-actions
+  created: '2026-09-21T04:11:38Z'
+  closed: '2026-10-13T14:02:47Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/13
+
+- number: 14
+  title: Criar apresentação sobre `dados-orcamentarios`
+  status: CLOSED
+  author: mariaefod
+  created: '2026-10-06T15:38:24Z'
+  closed: '2026-10-06T15:42:18Z'
+  url: https://github.com/splor-mg/apresentacoes/issues/14
+
+- number: 18
+  title: Criar apresentação sobre Semantic Versioning - SDD assistido por IA
+  status: OPEN
+  author: carloshob
+  created: '2026-10-27T19:10:05Z'
+  closed: null
+  url: https://github.com/splor-mg/apresentacoes/issues/18

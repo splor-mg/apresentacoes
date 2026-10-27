@@ -1,0 +1,87 @@
+---
+title: Criar apresentação ETL
+state: C
+author: gabrielbdornas
+created: '2026-01-06T21:55:41Z'
+updated: '2026-01-09T13:27:56Z'
+closed: '2026-01-09T13:27:56Z'
+assignees:
+- gabrielbdornas
+labels:
+- chore
+- documentation
+- meeting
+type: 2 - Média
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Capacitações
+  Planejado: Sim
+  Data início: '2026-01-06'
+  Data de vencimento: '2026-01-31'
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  Para reuniões @Laura-Dilly e @vivigoncalvesportonascimento.
+---
+# regs
+
+- date: 2026-01-06T21:55:42Z
+  reg: project:added:project
+  author: gabrielbdornas
+
+- date: 2026-01-06T21:55:44Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-01-06T21:55:45Z
+  reg: assignee:added:gabrielbdornas
+  author: gabrielbdornas
+
+- date: 2026-01-06T21:55:50Z
+  reg: label:added:chore
+  author: gabrielbdornas
+
+- date: 2026-01-06T21:55:50Z
+  reg: label:added:documentation
+  author: gabrielbdornas
+
+- date: 2026-01-06T21:55:50Z
+  reg: label:added:meeting
+  author: gabrielbdornas
+
+- date: 2026-01-06T21:55:55Z
+  reg: project:status_changed:unknown-project:unknown
+  author: gabrielbdornas
+
+- date: 2026-01-09T13:27:56Z
+  reg: comment
+  author: gabrielbdornas
+  body: |-
+    Considero apresentação criada. Consegui ir até a fase do `extract`. Vou fechar o Issue e ir criando outros a medida que me dedicar à inclusão de novos conteúdos.
+    
+    See https://github.com/splor-mg/trilha-dev/issues/129.
+
+- date: 2026-01-09T13:27:56Z
+  reg: state:closed
+  author: gabrielbdornas
+
+- date: 2026-01-09T13:27:59Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+---

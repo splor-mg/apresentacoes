@@ -1,0 +1,85 @@
+name: issues_options
+account: splor-mg
+state:
+  - O: aberto
+  - C: fechado
+
+labels:
+  - name: bug
+    id: LA_kwDOQpWHjM8AAAACSjmZYQ
+    description: |-
+      Algo não está funcionando corretamente
+    color: d73a4a
+    default: true
+
+  - name: chore
+    id: LA_kwDOQpWHjM8AAAACSjmZZg
+    description: |-
+      Tarefas de manutenção e organização
+    color: 1d29b0
+    default: false
+
+  - name: documentation
+    id: LA_kwDOQpWHjM8AAAACSjmZag
+    description: |-
+      Melhorias ou adições à documentação
+    color: 3449e3
+    default: true
+
+  - name: meeting
+    id: LA_kwDOQpWHjM8AAAACSjmZbw
+    description: |-
+      Relacionado a reuniões ou eventos
+    color: f1ffab
+    default: false
+
+  - name: new-feature
+    id: LA_kwDOQpWHjM8AAAACSjmZdA
+    description: |-
+      Nova funcionalidade ou melhoria planejada
+    color: 7069a2
+    default: false
+
+  - name: question
+    id: LA_kwDOQpWHjM8AAAACSjmZeQ
+    description: |-
+      Pergunta ou dúvida sobre o projeto
+    color: 760d9d
+    default: true
+
+  - name: wontfix
+    id: LA_kwDOQpWHjM8AAAACSjmZfg
+    description: |-
+      Issue não será corrigida ou implementada
+    color: 78e11f
+    default: true
+
+type:
+  - name: 1 - Alta
+    id: IT_kwDOByfrJc4BFzmP
+    description: |-
+      Tarefa com alta prioridade
+    color: RED
+    enabled: true
+
+  - name: 2 - Média
+    id: IT_kwDOByfrJc4BFzmS
+    description: |-
+      Tarefa com média prioridade
+    color: YELLOW
+    enabled: true
+
+  - name: 3 - Baixa
+    id: IT_kwDOByfrJc4BFzmU
+    description: |-
+      Tarefa com baixa prioridade
+    color: BLUE
+    enabled: true
+
+milestone: []
+
+relationships:
+  parent: 'um #N, ou null'
+  blocked_by: 'lista de #N'
+  blocking: 'lista de #N'
+  relates_to: 'lista de #N'

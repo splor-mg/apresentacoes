@@ -1,0 +1,80 @@
+name: pull-requests
+account: splor-mg
+pull_requests:
+- number: 5
+  title: Sync template updates on 2026-02-05T18:58:11
+  state: MERGED
+  draft: false
+  author: github-actions
+  created: '2026-02-05T18:58:17Z'
+  updated: '2026-10-13T13:57:47Z'
+  closed: '2026-02-10T17:14:54Z'
+  merged: '2026-02-10T17:14:54Z'
+  base: main
+  head: sync-template
+  url: https://github.com/splor-mg/apresentacoes/pull/5
+
+- number: 8
+  title: 'docs(slides): add apresentacao automatiza raiane'
+  state: MERGED
+  draft: false
+  author: raianecardoso
+  created: '2026-05-14T20:53:06Z'
+  updated: '2026-06-22T14:06:20Z'
+  closed: '2026-05-14T20:53:15Z'
+  merged: '2026-05-14T20:53:15Z'
+  base: main
+  head: apresentação-rede
+  url: https://github.com/splor-mg/apresentacoes/pull/8
+
+- number: 10
+  title: 9 python sudeste
+  state: MERGED
+  draft: false
+  author: raianecardoso
+  created: '2026-06-23T20:11:25Z'
+  updated: '2026-06-23T20:11:44Z'
+  closed: '2026-06-23T20:11:44Z'
+  merged: '2026-06-23T20:11:44Z'
+  base: main
+  head: 9-python-sudeste
+  url: https://github.com/splor-mg/apresentacoes/pull/10
+
+- number: 15
+  title: 14 dados orcamentarios
+  state: MERGED
+  draft: false
+  author: mariaefod
+  created: '2026-10-06T15:41:03Z'
+  updated: '2026-10-06T15:42:36Z'
+  closed: '2026-10-06T15:42:16Z'
+  merged: '2026-10-06T15:42:16Z'
+  base: main
+  head: 14_dados_orcamentarios
+  url: https://github.com/splor-mg/apresentacoes/pull/15
+
+- number: 16
+  title: Sync template updates on 2026-10-13T13:59:11
+  state: MERGED
+  draft: false
+  author: github-actions
+  created: '2026-10-13T13:59:16Z'
+  updated: '2026-10-13T14:02:45Z'
+  closed: '2026-10-13T14:02:45Z'
+  merged: '2026-10-13T14:02:45Z'
+  base: main
+  head: sync-template
+  url: https://github.com/splor-mg/apresentacoes/pull/16
+
+- number: 17
+  title: Apresentacao linktable
+  state: MERGED
+  draft: false
+  author: raianecardoso
+  created: '2026-10-13T20:55:56Z'
+  updated: '2026-10-13T20:56:32Z'
+  closed: '2026-10-13T20:56:32Z'
+  merged: '2026-10-13T20:56:32Z'
+  base: main
+  head: apresentacao-linktable
+  url: https://github.com/splor-mg/apresentacoes/pull/17

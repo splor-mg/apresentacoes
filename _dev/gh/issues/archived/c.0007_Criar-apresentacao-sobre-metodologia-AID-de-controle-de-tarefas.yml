@@ -1,0 +1,84 @@
+---
+title: Criar apresentação sobre metodologia AID de controle de tarefas
+state: C
+author: gabrielbdornas
+created: '2026-03-25T18:16:07Z'
+updated: '2026-07-20T20:43:59Z'
+closed: '2026-07-20T20:43:55Z'
+assignees: []
+labels:
+- chore
+- documentation
+type: 3 - Baixa
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Rotina
+  Planejado: Sim
+  Data início: '2026-04-07'
+  Data de vencimento: '2026-04-30'
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  Mostrando atividades cadastradas no board [WIP](https://github.com/orgs/splor-mg/projects/13/views/20).
+  
+  Minha ideia é criar a apresentação durante a reunião. Deste modo mostro para @mathpitanguy e @LorenadeCastro as duas coisas, ou seja, como utilizar o [`mkslides`](https://github.com/splor-mg/repo-template-mkslides) e como acompanhar suas atividades.
+  
+  ### Participantes    
+  
+  @mathpitanguy e @LorenadeCastro
+  
+---
+# regs
+
+- date: 2026-03-25T18:16:07Z
+  reg: project:added:project
+  author: gabrielbdornas
+
+- date: 2026-03-25T18:16:08Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-03-25T18:16:10Z
+  reg: assignee:added:gabrielbdornas
+  author: gabrielbdornas
+
+- date: 2026-03-25T18:16:14Z
+  reg: label:added:chore
+  author: gabrielbdornas
+
+- date: 2026-03-25T18:16:14Z
+  reg: label:added:documentation
+  author: gabrielbdornas
+
+- date: 2026-03-25T18:16:19Z
+  reg: project:status_changed:unknown-project:unknown
+  author: gabrielbdornas
+
+- date: 2026-07-20T20:43:55Z
+  reg: state:closed
+  author: gabrielbdornas
+
+- date: 2026-07-20T20:43:56Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-07-20T20:43:59Z
+  reg: assignee:removed:gabrielbdornas
+  author: gabrielbdornas
+---

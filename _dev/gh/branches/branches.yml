@@ -1,0 +1,36 @@
+name: branches
+account: splor-mg
+default: main
+
+branches_active:
+  - name: 9-python-sudeste
+    id: REF_kwDOQpWHjLtyZWZzL2hlYWRzLzktcHl0aG9uLXN1ZGVzdGU
+    last_author: raianecardoso
+
+  - name: apresentacao-linktable
+    id: REF_kwDOQpWHjNoAIXJlZnMvaGVhZHMvYXByZXNlbnRhY2FvLWxpbmt0YWJsZQ
+    last_author: raianecardoso
+
+  - name: feat/sdd-semVer
+    id: REF_kwDOQpWHjLpyZWZzL2hlYWRzL2ZlYXQvc2RkLXNlbVZlcg
+    last_author: carloshob
+
+  - name: gh-pages
+    id: REF_kwDOQpWHjLNyZWZzL2hlYWRzL2doLXBhZ2Vz
+    last_author: ''
+
+  - name: main
+    id: REF_kwDOQpWHjK9yZWZzL2hlYWRzL21haW4
+    last_author: raianecardoso
+
+  - name: modernizacao-dados-aid
+    id: REF_kwDOQpWHjNoAIXJlZnMvaGVhZHMvbW9kZXJuaXphY2FvLWRhZG9zLWFpZA
+    last_author: raianecardoso
+
+  - name: sync-template
+    id: REF_kwDOQpWHjLhyZWZzL2hlYWRzL3N5bmMtdGVtcGxhdGU
+    last_author: github-actions[bot]
+
+branches_deleted:
+  - 14_dados_orcamentarios
+  - apresentação-rede

@@ -1,0 +1,115 @@
+---
+title: Criar apresentação para o Python Sudeste
+state: C
+author: raianecardoso
+created: '2026-06-03T14:51:40Z'
+updated: '2026-07-07T18:33:12Z'
+closed: '2026-06-23T20:27:30Z'
+assignees:
+- gabrielbdornas
+- raianecardoso
+labels:
+- documentation
+type: 1 - Alta
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Rotina
+  Planejado: Sim
+  Data início: '2026-06-03'
+  Data de vencimento: '2026-06-30'
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  
+  
+  ### Lista de atividades e/ou correções
+  
+  - [ ] Atividade/Correção 1
+  - [ ] Atividade/Correção 2
+  - [ ] Atividade/Correção 3
+  
+  ### Participantes    
+  
+  @...
+  
+---
+# regs
+
+- date: 2026-06-03T14:51:40Z
+  reg: assignee:added:raianecardoso
+  author: raianecardoso
+
+- date: 2026-06-03T14:51:40Z
+  reg: assignee:added:gabrielbdornas
+  author: raianecardoso
+
+- date: 2026-06-03T14:51:41Z
+  reg: project:added:project
+  author: raianecardoso
+
+- date: 2026-06-03T14:51:42Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-06-03T14:51:43Z
+  reg: label:added:documentation
+  author: raianecardoso
+
+- date: 2026-06-03T14:51:46Z
+  reg: project:status_changed:unknown-project:unknown
+  author: raianecardoso
+
+- date: 2026-06-10T18:08:29Z
+  reg: comment
+  author: raianecardoso
+  body: |-
+    @gabrielbdornas, 
+    
+    Eu tentei acessar a proposta de palestra apresentada e aprovada no site do python sudeste, mas ela sumiu do meu perfil. Você pode verificar se ela está disponível pelo seu? Será mais fácil criar a apresentação se eu tiver esse material base. Obrigada. 
+
+- date: 2026-06-23T20:27:30Z
+  reg: comment
+  author: raianecardoso
+  body: |-
+    @gabrielbdornas 
+    
+    Apresentação criada e disponível [aqui](https://splor-mg.github.io/apresentacoes/20260622_python_sudeste.html#/). 
+    
+    Criei pensando na **minha** estrutura de pensamento e narrativa, fique à vontade para editar. Se você achar interessante, posso te apresentar o que pensei para cada slide. é só me avisar que coloco nas nossas agendas. Qualquer dúvida, estou por aqui.
+
+- date: 2026-06-23T20:27:30Z
+  reg: state:closed
+  author: raianecardoso
+
+- date: 2026-06-23T20:27:32Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-07-07T18:33:12Z
+  reg: comment
+  author: gabrielbdornas
+  body: |-
+    > [@gabrielbdornas](https://github.com/gabrielbdornas)
+    > 
+    > Apresentação criada e disponível [aqui](https://splor-mg.github.io/apresentacoes/20260622_python_sudeste.html#/).
+    > 
+    > Criei pensando na **minha** estrutura de pensamento e narrativa, fique à vontade para editar. Se você achar interessante, posso te apresentar o que pensei para cada slide. é só me avisar que coloco nas nossas agendas. Qualquer dúvida, estou por aqui.
+    
+    @raianecardoso, ficou ótimo! Pena que não vai rolar mais a apresentação. O ponto positivo é que já temos uma apresentação robusta para fazer em oportunidades futuras.
+---

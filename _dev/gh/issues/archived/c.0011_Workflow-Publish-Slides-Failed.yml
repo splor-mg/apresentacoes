@@ -1,0 +1,102 @@
+---
+title: Workflow Publish Slides Failed
+state: C
+author: raianecardoso
+created: '2026-06-23T20:30:25Z'
+updated: '2026-06-23T20:32:43Z'
+closed: '2026-06-23T20:30:41Z'
+assignees:
+- raianecardoso
+labels:
+- bug
+type: null
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Rotina
+  Data início: '2026-06-23'
+  Data de vencimento: '2026-06-30'
+  Planejado: null
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  Ver [log](https://github.com/splor-mg/apresentacoes/actions/runs/28053917375)
+  
+  O erro está acontecendo porque o ambiente virtual (.venv) que foi restaurado pelo cache está inconsistente e, quando o Poetry tenta recriá-lo, ele não reinstala as dependências.
+  
+  ```
+  The virtual environment found in .../.venv seems to be broken.
+  Recreating virtualenv apresentacoes in .../.venv
+  
+  Command not found: mkslides
+  Command not found: task
+  ```
+  
+  Isso indica que:
+  
+  O cache .venv foi recuperado.
+  O Poetry detectou que ele está quebrado e criou um novo ambiente vazio.
+  Como o passo Install dependencies foi pulado (cache-hit == true), mkslides e task nunca foram instalados.
+  
+  O problema está nesta lógica:
+  ```
+  - name: Install dependencies
+    if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+    run: poetry install --no-interaction
+  ```
+  Se o cache existir, esse passo não roda, mesmo que o ambiente esteja corrompido.
+---
+# regs
+
+- date: 2026-06-23T20:30:26Z
+  reg: project:added:project
+  author: raianecardoso
+
+- date: 2026-06-23T20:30:27Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-06-23T20:30:28Z
+  reg: assignee:added:raianecardoso
+  author: raianecardoso
+
+- date: 2026-06-23T20:30:31Z
+  reg: label:added:bug
+  author: raianecardoso
+
+- date: 2026-06-23T20:30:40Z
+  reg: project:status_changed:unknown-project:unknown
+  author: raianecardoso
+
+- date: 2026-06-23T20:30:41Z
+  reg: state:closed
+  author: raianecardoso
+
+- date: 2026-06-23T20:32:43Z
+  reg: comment
+  author: raianecardoso
+  body: |-
+    Fixed with 42ae143.
+    
+    Removida a condição e o poetry sempre instala as dependências. 
+    
+    ```
+    - name: Install dependencies
+      run: poetry install --no-interaction
+    ```
+---

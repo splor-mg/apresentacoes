@@ -1,0 +1,7 @@
+pull-number,state,draft,author,created,updated,closed,merged,base,head,title,url
+5,MERGED,false,github-actions,2026-02-05T18:58:17Z,2026-10-13T13:57:47Z,2026-02-10T17:14:54Z,2026-02-10T17:14:54Z,main,sync-template,Sync template updates on 2026-02-05T18:58:11,https://github.com/splor-mg/apresentacoes/pull/5
+8,MERGED,false,raianecardoso,2026-05-14T20:53:06Z,2026-06-22T14:06:20Z,2026-05-14T20:53:15Z,2026-05-14T20:53:15Z,main,apresentação-rede,docs(slides): add apresentacao automatiza raiane,https://github.com/splor-mg/apresentacoes/pull/8
+10,MERGED,false,raianecardoso,2026-06-23T20:11:25Z,2026-06-23T20:11:44Z,2026-06-23T20:11:44Z,2026-06-23T20:11:44Z,main,9-python-sudeste,9 python sudeste,https://github.com/splor-mg/apresentacoes/pull/10
+15,MERGED,false,mariaefod,2026-10-06T15:41:03Z,2026-10-06T15:42:36Z,2026-10-06T15:42:16Z,2026-10-06T15:42:16Z,main,14_dados_orcamentarios,14 dados orcamentarios,https://github.com/splor-mg/apresentacoes/pull/15
+16,MERGED,false,github-actions,2026-10-13T13:59:16Z,2026-10-13T14:02:45Z,2026-10-13T14:02:45Z,2026-10-13T14:02:45Z,main,sync-template,Sync template updates on 2026-10-13T13:59:11,https://github.com/splor-mg/apresentacoes/pull/16
+17,MERGED,false,raianecardoso,2026-10-13T20:55:56Z,2026-10-13T20:56:32Z,2026-10-13T20:56:32Z,2026-10-13T20:56:32Z,main,apresentacao-linktable,Apresentacao linktable,https://github.com/splor-mg/apresentacoes/pull/17

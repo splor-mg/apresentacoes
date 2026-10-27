@@ -1,0 +1,37 @@
+---
+title: Sync template workflow failed on 2026-09-21T04:11:34
+state: C
+author: app/github-actions
+created: '2026-09-21T04:11:38Z'
+updated: '2026-10-13T14:02:47Z'
+closed: '2026-10-13T14:02:47Z'
+assignees: []
+labels: []
+type: null
+projects: []
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests:
+  - number: 16
+    title: Sync template updates on 2026-10-13T13:59:11
+    state: MERGED
+    url: https://github.com/splor-mg/apresentacoes/pull/16
+  branches: []
+---
+# description
+
+body: |-
+  Check the logs [here](https://github.com/splor-mg/apresentacoes/actions/runs/35560048533/job/106211089344).
+  
+---
+# regs
+
+- date: 2026-10-13T14:02:47Z
+  reg: state:closed
+  author: mariaefod
+---

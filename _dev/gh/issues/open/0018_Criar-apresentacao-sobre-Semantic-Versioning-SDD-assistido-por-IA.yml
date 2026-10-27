@@ -1,0 +1,75 @@
+---
+title: Criar apresentação sobre Semantic Versioning - SDD assistido por IA
+state: O
+author: carloshob
+created: '2026-10-27T19:10:05Z'
+updated: '2026-10-27T19:14:46Z'
+closed: null
+assignees:
+- carloshob
+labels:
+- new-feature
+type: 2 - Média
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Todo
+  Projeto: Datamart
+  Planejado: Sim
+  Data início: '2026-10-01'
+  Data de vencimento: '2026-10-28'
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  
+  ### Descrição
+  
+  Montar a apresentação sobre Semantic Versioning em um contexto de SDD (Spec-Driven Development) assistido por IA. A ideia é schema de versionamento, comparar alternativas ao SemVer com CalVer, ZeroVer e hash, e explicitar como decidir entre MAJOR, MINOR e PATCH.
+  
+  No fim, apresentar a proposta do de pacote com CLI, num repositório da splor-mg, que levaria as normas de versão e usaria o Copilot para sugerir o incremento.
+  
+  ### Lista de atividades e/ou correções
+  
+  - [x] Adicionar `slides/20261028_sdd_semver.md`, com tema Dracula, no formato da apresentação do linktable
+  - [x] Comparar SemVer, CalVer, ZeroVer e hash
+  - [x] Explicar MAJOR, MINOR e PATCH, interface pública, pré-release e build metadata
+  - [x] Incluir a proposta do CLI assistente e próximos passos
+  - [x] Conferir a renderização com `poetry run task serve`
+  
+  ### Participantes
+  
+  @carloshob
+  
+---
+# regs
+
+- date: 2026-10-27T19:10:05Z
+  reg: assignee:added:carloshob
+  author: carloshob
+
+- date: 2026-10-27T19:10:07Z
+  reg: label:added:new-feature
+  author: carloshob
+
+- date: 2026-10-27T19:10:08Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-10-27T19:10:16Z
+  reg: project:status_changed:unknown-project:unknown
+  author: carloshob
+---

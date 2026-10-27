@@ -1,0 +1,71 @@
+---
+title: Criar apresentação sobre qlik
+state: C
+author: gabrielbdornas
+created: '2026-02-05T13:56:24Z'
+updated: '2026-02-05T21:16:01Z'
+closed: '2026-02-05T21:15:49Z'
+assignees:
+- gabrielbdornas
+labels:
+- documentation
+type: 2 - Média
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Datamart
+  Planejado: Sim
+  Data início: '2026-02-05'
+  Data de vencimento: '2026-02-05'
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  ### Descrição
+  
+  Em especial para reunião com Casa Civil que acontecerá dia 10/02/2026.
+---
+# regs
+
+- date: 2026-02-05T13:56:25Z
+  reg: project:added:project
+  author: gabrielbdornas
+
+- date: 2026-02-05T13:56:26Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-02-05T21:15:49Z
+  reg: comment
+  author: gabrielbdornas
+  body: |-
+    Já validada com equipe Casa Civil - https://splor-mg.github.io/apresentacoes/20260210_servidor_qlik.html?showNotes=true#/
+
+- date: 2026-02-05T21:15:49Z
+  reg: state:closed
+  author: gabrielbdornas
+
+- date: 2026-02-05T21:15:51Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-02-05T21:15:55Z
+  reg: assignee:added:gabrielbdornas
+  author: gabrielbdornas
+
+- date: 2026-02-05T21:15:58Z
+  reg: label:added:documentation
+  author: gabrielbdornas
+---

@@ -1,0 +1,76 @@
+---
+title: Publicação automática dos slides não está funcionando
+state: C
+author: gabrielbdornas
+created: '2026-01-20T13:34:25Z'
+updated: '2026-02-05T19:51:58Z'
+closed: '2026-02-05T19:51:46Z'
+assignees:
+- gabrielbdornas
+labels:
+- new-feature
+type: 3 - Baixa
+projects:
+- name: Gestão à Vista AID
+  number: 13
+  id: PVT_kwDOByfrJc4AmH_f
+  Status: Done
+  Projeto: Rotina
+  Data início: '2026-02-05'
+  Data de vencimento: '2026-02-05'
+  Planejado: null
+  tags: null
+milestone: null
+relationships:
+  parent: null
+  blocked_by: []
+  blocking: []
+  relates_to: []
+development:
+  pull_requests: []
+  branches: []
+---
+# description
+
+body: |-
+  Erros:
+  
+  Branch "main" is not allowed to deploy to github-pages due to environment protection rules.
+  The deployment was rejected or didn't satisfy other protection rules.
+  
+  <img width="1623" height="604" alt="Image" src="https://github.com/user-attachments/assets/22742407-5f7a-4a17-b050-e1678bee78cc" />
+  
+  
+---
+# regs
+
+- date: 2026-01-20T13:34:25Z
+  reg: project:added:project
+  author: gabrielbdornas
+
+- date: 2026-01-20T13:34:26Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-02-05T19:51:46Z
+  reg: comment
+  author: gabrielbdornas
+  body: |-
+    Fixed after https://github.com/splor-mg/apresentacoes/commit/bd1459b2c92741808c00ff41a375e549a733fe93.
+
+- date: 2026-02-05T19:51:46Z
+  reg: state:closed
+  author: gabrielbdornas
+
+- date: 2026-02-05T19:51:47Z
+  reg: project:status_changed:unknown-project:unknown
+  author: github-project-automation[bot]
+
+- date: 2026-02-05T19:51:49Z
+  reg: assignee:added:gabrielbdornas
+  author: gabrielbdornas
+
+- date: 2026-02-05T19:51:55Z
+  reg: label:added:new-feature
+  author: gabrielbdornas
+---

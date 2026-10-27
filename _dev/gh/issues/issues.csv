@@ -1,0 +1,12 @@
+issue_number,status,author,created,closed,title
+1,CLOSED,gabrielbdornas,2026-01-05T22:06:14Z,2026-01-05T22:20:32Z,Criar apresentação gerencial AID/SPLOR Janeiro 2026
+2,CLOSED,gabrielbdornas,2026-01-06T21:55:41Z,2026-01-09T13:27:56Z,Criar apresentação ETL
+3,CLOSED,gabrielbdornas,2026-01-20T13:34:25Z,2026-02-05T19:51:46Z,Publicação automática dos slides não está funcionando
+4,CLOSED,gabrielbdornas,2026-02-05T13:56:24Z,2026-02-05T21:15:49Z,Criar apresentação sobre qlik
+7,CLOSED,gabrielbdornas,2026-03-25T18:16:07Z,2026-07-20T20:43:55Z,Criar apresentação sobre metodologia AID de controle de tarefas
+9,CLOSED,raianecardoso,2026-06-03T14:51:40Z,2026-06-23T20:27:30Z,Criar apresentação para o Python Sudeste
+11,CLOSED,raianecardoso,2026-06-23T20:30:25Z,2026-06-23T20:30:41Z,Workflow Publish Slides Failed
+12,OPEN,gabrielbdornas,2026-06-25T19:39:22Z,,Links abertos em nova aba
+13,CLOSED,github-actions,2026-09-21T04:11:38Z,2026-10-13T14:02:47Z,Sync template workflow failed on 2026-09-21T04:11:34
+14,CLOSED,mariaefod,2026-10-06T15:38:24Z,2026-10-06T15:42:18Z,Criar apresentação sobre `dados-orcamentarios`
+18,OPEN,carloshob,2026-10-27T19:10:05Z,,Criar apresentação sobre Semantic Versioning - SDD assistido por IA

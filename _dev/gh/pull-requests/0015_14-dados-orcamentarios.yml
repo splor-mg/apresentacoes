@@ -1,0 +1,26 @@
+---
+title: 14 dados orcamentarios
+state: MERGED
+draft: false
+author: mariaefod
+created: '2026-10-06T15:41:03Z'
+updated: '2026-10-06T15:42:36Z'
+closed: '2026-10-06T15:42:16Z'
+merged: '2026-10-06T15:42:16Z'
+base: main
+head: 14_dados_orcamentarios
+labels:
+- documentation
+milestone: null
+assignees:
+- mariaefod
+reviewers: []
+---
+# description
+
+body: |-
+  Fix #14 
+---
+# regs
+
+---
