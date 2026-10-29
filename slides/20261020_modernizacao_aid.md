@@ -246,20 +246,76 @@ Um repositório central que organiza os metadados dos dados e coordena a execuç
 <!--s-->
 ## Zendt
 
-Ferramenta desenvolvida pela equipe para aplicar regras de negócio a tabelas de dados, incluindo classificações relacionadas a receitas e despesas orçamentárias.
+Ferramenta desenvolvida pela equipe para aplicar regras de negócio a tabelas de dados, a exemplo das classificações orçamentárias presentes no pacote relatórios (DCAF).
 
-**Como funciona**
-- As regras são representadas em estruturas próprias, em formato padronizado, em vez de ficarem embutidas em scripts de processamento.
-- Permite consultar as regras disponíveis e aplicá-las diretamente às tabelas.
-- Acrescenta às tabelas as informações produzidas pelas regras, preservando as colunas originais.
 
-**Benefício esperado**
-- Facilitar a compreensão e a consulta das regras orçamentárias.
-- Tornar a aplicação das regras mais padronizada e reutilizável.
-- Reduzir a dependência da leitura e interpretação de código para entender como uma classificação é produzida.
+[Problema]()
+
+- Aplicação em diferentes contextos (Pacote em linguagem R);
+- Manutenção exige conhecimento de programação da DCAF;
+- Conhecimento “restrito” à DCAF (difícil acesso, difícil aplicação);
+- Dificulta a padronização de projetos/ferramentas da SPLOR.
+</div>
+
+
+[Solução Encontrada]()
+
+Criação de uma ferramenta capaz de separar *lógica de decisão* de *linguagem de programação*
+
+<span style="color:rgb(215, 169, 245);">Simplificar</span> a criação e a aplicação de regras orçamentárias, focando também em <span style="color:rgb(215, 169, 245);">transparência</span> (acesso fácil para toda a SPLOR e, possivelmente, até para fora) e <span style="color:rgb(215, 169, 245);">legibilidade</span> (visualização das regras em linguagem natural), mantendo características importantes como <span style="color:rgb(215, 169, 245);">versionamento</span>.
+
+**O acesso simplificado é para a regra aplicada (colunas nas bases) e para o contéudo da regra!**
+
+
+<!--v-->
+
+[Dois Produtos]()
+- Zendt: ferramenta (CLI) de aplicação das regras --> responsável por entregar às bases da SPLOR as colunas com os campos orçamentários, tornando a aplicação das regras mais padronizada e reutilizável.
+- Interface gráfica de criação e edição das regras --> responsável por facilitar a escrita, a compreensão e a consulta das regras [reduz a dependência da leitura e interpretação de código para entender como uma classificação é produzida].
+
+**Representação das Regras**
+- As regras são representadas em estruturas próprias [GoRules JDM --> grafos em formato de texto], em formato padronizado, em vez de ficarem embutidas em scripts de processamento.
+
+<!--v-->
+**Preview da Interface**
+
+Cada equipe possui conjuntos ("pacotes") e cada conjunto/pacote possui regras.
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 90%; margin: 0 auto;">
+  <div>
+    <img src="assets/zendt/equipes.png">
+  </div>
+  <div>
+    <img src="assets/zendt/pacotes.png">
+  </div>
+  <div>
+    <img src="assets/zendt/regras.png">
+  </div>
+  <div>
+
+  > Regra = qualquer informação necessária para o processo decisório, que atribui valores (classifica) linha a linha a um arquivo excel/csv*
+
+  </div>
+</div>
+
+<!--v-->
+**Visualização de uma regra**
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 90%; margin: 0 auto;">
+  <div>
+    Grafo
+    <img src="assets/zendt/grafo_regra.png">
+  </div>
+  <div>
+    Tabela da Regra
+    <img src="assets/zendt/exemplo_regra.png">
+  </div>
+</div>
+
+> Destaque ao campo "description" da regra --> descrições detalhadas linha a linha que não poluem a visualização (como comentários de código) e são facilmente consultáveis
 
 <!--s-->
-## Linktable 
+## Linktable
 
 Módulo desenvolvido em Python e integrado ao Dpetl para gerar tabelas intermediárias que permitem relacionar tabelas com diferentes níveis de detalhamento.
 
