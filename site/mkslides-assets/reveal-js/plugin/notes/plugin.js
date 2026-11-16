@@ -1,4 +1,4 @@
-import speakerViewHTML from './speaker-view.html?raw'
+import speakerViewHTML from './speaker-view.html'
 
 import { marked } from 'marked';
 

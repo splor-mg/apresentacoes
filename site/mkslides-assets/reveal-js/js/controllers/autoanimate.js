@@ -1,4 +1,5 @@
-import { queryAll, extend, createStyleSheet, matches, closest } from '../utils/util'
+import { queryAll, extend, createStyleSheet, matches, closest } from '../utils/util.js'
+import { FRAGMENT_STYLE_REGEX } from '../utils/constants.js'
 
 // Counter used to generate unique IDs for auto-animated elements
 let autoAnimateCounter = 0;

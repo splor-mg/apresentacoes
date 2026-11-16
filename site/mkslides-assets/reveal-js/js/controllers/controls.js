@@ -1,5 +1,5 @@
-import { queryAll, enterFullscreen } from '../utils/util'
-import { isAndroid } from '../utils/device'
+import { queryAll, enterFullscreen } from '../utils/util.js'
+import { isAndroid } from '../utils/device.js'
 
 /**
  * Manages our presentation controls. This includes both
@@ -66,11 +66,9 @@ export default class Controls {
 	 */
 	configure( config, oldConfig ) {
 
-		const speakerOnly = config.controls === 'speaker' || config.controls === 'speaker-only';
-
 		this.element.style.display = (
 			config.controls &&
-			(!speakerOnly || this.Reveal.isSpeakerNotes())
+			(config.controls !== 'speaker-only' || this.Reveal.isSpeakerNotes())
 		) ? 'block' : 'none';
 
 		this.element.setAttribute( 'data-controls-layout', config.controlsLayout );
@@ -85,10 +83,9 @@ export default class Controls {
 		let pointerEvents = [ 'touchstart', 'click' ];
 
 		// Only support touch for Android, fixes double navigations in
-		// stock browser. Use touchend for it to be considered a valid
-		// user interaction (so we're allowed to autoplay media).
+		// stock browser
 		if( isAndroid ) {
-			pointerEvents = [ 'touchend' ];
+			pointerEvents = [ 'touchstart' ];
 		}
 
 		pointerEvents.forEach( eventName => {
@@ -105,7 +102,7 @@ export default class Controls {
 
 	unbind() {
 
-		[ 'touchstart', 'touchend', 'click' ].forEach( eventName => {
+		[ 'touchstart', 'click' ].forEach( eventName => {
 			this.controlsLeft.forEach( el => el.removeEventListener( eventName, this.onNavigateLeftClicked, false ) );
 			this.controlsRight.forEach( el => el.removeEventListener( eventName, this.onNavigateRightClicked, false ) );
 			this.controlsUp.forEach( el => el.removeEventListener( eventName, this.onNavigateUpClicked, false ) );

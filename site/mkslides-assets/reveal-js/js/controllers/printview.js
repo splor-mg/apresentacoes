@@ -1,5 +1,5 @@
-import { SLIDES_SELECTOR } from '../utils/constants'
-import { queryAll, createStyleSheet } from '../utils/util'
+import { SLIDES_SELECTOR } from '../utils/constants.js'
+import { queryAll, createStyleSheet } from '../utils/util.js'
 
 /**
  * Setups up our presentation for printing/exporting to PDF.
