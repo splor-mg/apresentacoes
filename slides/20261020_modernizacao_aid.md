@@ -255,7 +255,6 @@ Ferramenta desenvolvida pela equipe para aplicar regras de negócio a tabelas de
 - Manutenção exige conhecimento de programação da DCAF;
 - Conhecimento “restrito” à DCAF (difícil acesso, difícil aplicação);
 - Dificulta a padronização de projetos/ferramentas da SPLOR.
-</div>
 
 
 [Solução Encontrada]()
@@ -264,7 +263,7 @@ Criação de uma ferramenta capaz de separar *lógica de decisão* de *linguagem
 
 <span style="color:rgb(215, 169, 245);">Simplificar</span> a criação e a aplicação de regras orçamentárias, focando também em <span style="color:rgb(215, 169, 245);">transparência</span> (acesso fácil para toda a SPLOR e, possivelmente, até para fora) e <span style="color:rgb(215, 169, 245);">legibilidade</span> (visualização das regras em linguagem natural), mantendo características importantes como <span style="color:rgb(215, 169, 245);">versionamento</span>.
 
-**O acesso simplificado é para a regra aplicada (colunas nas bases) e para o contéudo da regra!**
+**O acesso simplificado é para a regra aplicada (colunas nas bases) e para o conteúdo da regra!**
 
 
 <!--v-->
