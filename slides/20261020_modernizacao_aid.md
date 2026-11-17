@@ -140,7 +140,7 @@ _(Carga e utilização nos painéis e relatórios)_
 
 **BOCLI**
 
-_(Download direto de dados, sem o intermediários)_
+_(Download direto dos dados, sem intermediários)_
 
 [↓]()
 
@@ -172,13 +172,51 @@ _(Painéis e relatórios)_
 
 ## BOCLI
 
-Desenvolvido pela equipe da AID para acessar os dados do SAP BusinessObjects diretamente por meio de sua API REST.
+Ferramenta de linha de comando desenvolvida pela equipe da AID para operar o [BO](https://www.bicorporativo.mg.gov.br/BOE/BI/) de forma sistêmica, sem depender da interface web.
 
-- Download direto dos dados pelo terminal.
-- Eliminação do envio por e-mail e da divisão dos arquivos.
-- Fluxo de extração mais simples e direto, com menos dependências.
+[Problema]()
+- A extração dependia de agendamentos no BO e do envio dos relatórios por e-mail.
+- Os arquivos recebidos precisavam ser separados antes de serem processados.
+
+[Solução encontrada]()
+- Os relatórios são exportados do BO diretamente para arquivo, com um único comando.
+- Os filtros do relatório (ex.: ano de exercício) são informados no próprio comando.
+
+[↓]()
 
 **Menos etapas operacionais e uma extração de dados mais simples de automatizar e manter.**
+
+<!--v-->
+
+## BOCLI na prática
+
+<div class="r-hstack" style="align-items:flex-start; gap:80px">
+<div style="flex:1">
+
+**1. Exportar um relatório**
+
+```bash
+bo export dados_siafi/current/execucao \
+  --dp DP0 \
+  -p "Ano de Exercício=2026" \
+  -o data_raw/execucao.csv
+```
+
+- `export`: caminho do relatório no BO
+- `-p`: filtros do relatório
+- `-o`: arquivo de saída
+
+</div>
+<div style="flex:1">
+
+**2. Usar o mesmo comando em qualquer fluxo**
+
+- Usado pelo Dpetl, por agentes de IA ou por outros sistemas
+- Variando os filtros: vários exercícios, meses ou combinações
+- Arquivo disponível assim que o BO gera o relatório, sem e-mail
+
+</div>
+</div>
 
 <!--s-->
 ## dados-orcamentarios
