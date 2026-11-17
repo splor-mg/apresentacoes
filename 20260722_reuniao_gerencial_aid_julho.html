@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        
+
+        <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/reveal.css" />
+
+        
+            <link rel="stylesheet" href="mkslides-assets/reveal-js/dist/theme/solarized.css" />
+        
+        
+            <link rel="stylesheet" href="mkslides-assets/highlight-js-themes/monokai.css" />
+        
+
+        
+            
+        
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown
+                
+                    data-separator="<!--s-->"
+                
+                    data-separator-vertical="<!--v-->"
+                
+                    data-separator-notes="^Notes?:"
+                
+                    data-charset="utf-8"
+                
+                >
+                    <!-- The markdown must be placed to the whole left to prevent indentation issues like https://github.com/MartenBE/mkslides/issues/52 -->
+                    <textarea data-template>
+# Reunião Gerencial AID/SPLOR-MG - Julho 2026
+
+<!--s-->
+
+## Pauta
+
+- Equipe.
+- Python Brasil.
+- Datamart.
+- Transição de sistemas.
+- IA.
+- Ementário.
+- Capacitações.
+- ???
+
+<!--s-->
+
+## Equipe
+
+- Laura chegou dia 13/07/2026.
+
+Note:
+
+- Toda animada.
+- [Plataforma de definição de critérios orçamentários](https://youtu.be/_2_tJPAMNiQ).
+
+<!--s-->
+
+## Python Brasil
+
+Podemos?
+
+Note:
+
+- Outubro.
+- Eu não vou.
+
+<!--s-->
+
+## Datamart
+
+Note:
+
+- Finalizando ETL unificado com Maria (mais um mês).
+- Raiane e Andrey estudando melhor formato do Banco de dados.
+- Raiane e eu já [recriamos o código linktable](https://github.com/gabrielbdornas/reprex/blob/20260714_linktable/scripts/main.py).
+- Estagiários e Vivi recriando Qlik em outra ferramentas.
+- Guilherme me ajudando a entender Rel. Operacional.
+
+<!--s-->
+
+## Transição de sistemas
+
+Note:
+
+- De-para sisor ppo já enviado.
+- Solicitação código fonte ppo.
+
+<!--s-->
+
+## IA
+
+
+Note:
+
+- Andrey em conversa com Vivi e Tuli para projeto notas técnicas TCE.
+- Gestão de subscrição pela equipe Automatiza e Reunião com Henrique. Ainda estamos migrando.
+
+<!--s-->
+
+## Ementário
+
+Note:
+- Início dos testes este mês. 
+- Carlos está de férias prêmio.
+
+<!--s-->
+
+## Capacitações
+
+- Trilha-dev Python na fase final.
+
+Note:
+
+- Adesão baixa.
+
+<!--s-->
+
+## ???
+
+Note:
+
+- Alguma orientação?
+
+<!--s-->
+
+## FIM
+                    </textarea>
+                </section>
+            </div>
+        </div>
+        <script src="mkslides-assets/reveal-js/dist/reveal.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/highlight.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/markdown.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/math.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/notes.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/search.js"></script>
+        <script src="mkslides-assets/reveal-js/dist/plugin/zoom.js"></script>
+
+        
+            
+                
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin/plugin/mermaid/mermaid.min.js"></script>
+                    
+                
+            
+        
+
+        <script>
+            Reveal.initialize({
+                
+                    
+                        history: true,
+                    
+                        slideNumber: "c/t",
+                    
+                
+                plugins: [
+                    RevealMarkdown, // Must come before the other plugins so they can hook into the generated HTML.
+                    RevealHighlight,
+                    RevealMath.KaTeX,
+                    RevealNotes,
+                    RevealSearch,
+                    RevealZoom,
+
+                    
+                        
+                            
+                                RevealMermaid,
+                            
+                        
+                    
+                ],
+            });
+        </script>
+    </body>
+</html>
