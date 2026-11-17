@@ -363,66 +363,8 @@ Módulo desenvolvido em Python e integrado ao Dpetl para gerar tabelas intermedi
 
 <!--v-->
 
-<div class="r-hstack" style="align-items:flex-start; gap:80px">
-<div style="flex:1">
-receita
 
-    === "Antes"
-
-        | ano  | mês | uo    | fonte | valor  |
-        | ---- | --- | ----- | ----- | ------ |
-        | 2026 | 03  | 2061 | 60    | 100000 |
-
-    === "Após a criação das chaves"
-
-        | k_receita | valor  |
-        | --------- | ------ |
-        | "2026 - 03 - 2061 - 60 - null - null" | 100000 |
-
-execucao
-
-    === "Antes"
-
-        | ano  | mês | uo    | ação | elemento | valor  |
-        | ---- | --- | ----- | ---- | -------- | ------ |
-        | 2026 | 03  | 2061 | 20RK | 339030   | 150000 |
-
-    === "Após a criação das chaves"
-
-        | k_execucao | valor  |
-        | ---------- | ------ |
-        | "2026 - 03 - 2061 - null - 20RK - 339030" | 150000 |
-</div>
-
-<div style="flex:1">
-credito
-
-    === "Antes"
-
-        | ano  | mês | uo    | ação | valor |
-        | ---- | --- | ----- | ---- | ----- |
-        | 2026 | 03  | 2061 | 20RK | 80000 |
-
-    === "Após a criação das chaves"
-
-        | k_credito | valor |
-        | --------- | ----- |
-        | "2026 - 03 - 2061 - null - 20RK - null" | 80000 |
-</div>
-</div>
-<!--v-->
-
-*Linktable*
-
-    === "Resultado"
-      | ano  | mês | uo    | fonte | ação | elemento | k_receita         | k_execucao         | k_credito         |
-      | ---- | --- | ----- | ----- | ---- | -------- | ----------------- | -----------------  | ----------------- |
-      | 2026 | 03  | 2061 | 60    | null | null     | "2026 - 03 - 2061 - 60 - null - null " | null | null     |
-      | 2026 | 03  | 2061 | null  | 20RK | 339030   | null | "2026 - 03 - 2061 - null  - 20RK - 339030"  | null  |
-      | 2026 | 03  | 2061 | null  | 20RK | null     | null | null  | "2026 - 03 - 2061 - null - 20RK  - null"      |
-
-** inserir link para a link funcionando **
-
+**[Exemplo de Receita, execução e crédito pela linktable](https://claude.ai/artifact/Q1TPzCXccchas2sTAvEzmS)**
 <!--s-->
 
 <div class="r-hstack" style="align-items:flex-start; gap:80px">
